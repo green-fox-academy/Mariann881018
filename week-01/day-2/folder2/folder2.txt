@@ -1,1 +1,3 @@
 this is folder2's file
+and this is the modification
+now the 3rd one
