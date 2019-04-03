@@ -1,0 +1,69 @@
+header {
+    font-family: courier;
+    background-color: #333333;
+}
+
+body {
+  margin: auto;
+  background-image: url(assets/topography.png);
+  font-family: courier;
+}
+
+.content{
+    margin: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 90%;
+    text-align: justify;  
+}
+
+a:link, a:visited{
+    color: #ff0099;
+    text-decoration: underline;
+    text-align: right;
+}
+
+#logo{
+    position: absolute;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  background-color: #333333;
+}
+
+#subtitle{
+    color: #ff0099;
+}
+
+#separator{
+    text-align: center;
+}
+
+#Wiki{
+    text-align: center;
+    }
+ 
+dt {
+    text-indent: -16px;
+    font-weight:bolder;
+    padding: 16px;
+}
+
+dd{
+    margin: auto;
+    padding: 0,0;
+    }

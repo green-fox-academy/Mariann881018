@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0px;
+    font-family: Calibri;
+    background-image: url(travel-background.jpg);
+    background-size: cover;
+    color:aliceblue;
+}
+
+h1{
+    font-size: 25px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+    line-height: 10px;
+}
+
+.header{
+    text-transform: capitalize;
+    background-color: rgb(21, 169, 196);
+    font-size: 30px;
+    line-height: 1px;
+    padding: 0;
+    border: 1px solid black;
+}
+
+.header p{
+    padding-left: 10%;
+}
+
+.content{
+    margin: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 90%;
+}
+
+article{
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: steelblue;
+}
+article p{
+    margin: 0 0;
+}
+
+button {
+    border-radius: 20px;
+    font-size: 20px;
+}
