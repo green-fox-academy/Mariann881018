@@ -1,26 +1,23 @@
-import java.util.Scanner;
-public class AverageOfInput {
-  static Scanner input = new Scanner(System.in);
+import  java.util.Scanner;
+public class AverageOfInput{
   public static void main(String[] args) {
-    double i;
-    double sum = 0;
-    int count = 0;
-
+    Scanner scan = new Scanner(System.in);
     System.out.println("Please give me 5 numbers:");
-    while (input.hasNextDouble()){
+    int numOne = scan.nextInt();
+    int numTwo = scan.nextInt();
+    int numThree = scan.nextInt();
+    int numFour = scan.nextInt();
+    int numFive = scan.nextInt();
 
-      i = input.nextDouble();
-      sum = sum = i;
-      count++;
-
-    }
+    int sum = numOne + numTwo + numThree + numFour + numFive;
+    float average = sum /5;
 
     System.out.println("Sum: " + sum);
-    System.out.println("Average: "+ sum / (count));
-      }
-}
+    System.out.println("Average: " + average);
 
+  }
+
+}
 // Write a program that asks for 5 integers in a row,
 // then it should print the sum and the average of these numbers like:
-//
 // Sum: 22, Average: 4.4

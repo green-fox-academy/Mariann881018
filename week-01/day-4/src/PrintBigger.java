@@ -7,9 +7,8 @@ public class PrintBigger {
     System.out.println("Give me 2 numbers");
 
     Scanner inputOne = new Scanner(System.in);
-    Scanner inputTwo = new Scanner(System.in);
-    numOne = inputOne.nextInt();
-    numTwo = inputTwo.nextInt();
+      numOne = inputOne.nextInt();
+    numTwo = inputOne.nextInt();
 
     if (numOne > numTwo){
       System.out.println("The bigger is " + numOne);
