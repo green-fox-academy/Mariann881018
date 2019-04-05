@@ -5,8 +5,8 @@ public class DrawTriangle {
     Scanner num = new Scanner(System.in);
     int a = num.nextInt();
 
-    for( int i = 1; i <= a; i++ ){
-      for( int j = 0; j < i; j++ ){
+    for( int b = 1; b <= a; b++ ){
+      for( int c = 0; c < b; c++ ){
         System.out.print("*");
       }
       System.out.println();
