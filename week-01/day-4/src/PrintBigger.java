@@ -13,10 +13,12 @@ public class PrintBigger {
 
     if (numOne > numTwo){
       System.out.println("The bigger is " + numOne);
-    } else {
+    } else if (numTwo > numOne){
       System.out.println("The bigger is " + numTwo);
+    }
+    else {
+      System.out.println("They are equal.");
     }
   }
 }
-
 // Write a program that asks for two numbers and prints the bigger one
