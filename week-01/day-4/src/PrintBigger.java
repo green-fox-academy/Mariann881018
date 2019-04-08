@@ -7,7 +7,7 @@ public class PrintBigger {
     System.out.println("Give me 2 numbers");
 
     Scanner inputOne = new Scanner(System.in);
-      numOne = inputOne.nextInt();
+    numOne = inputOne.nextInt();
     numTwo = inputOne.nextInt();
 
     if (numOne > numTwo){

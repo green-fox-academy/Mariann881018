@@ -4,9 +4,8 @@ public class CountFromTo {
     System.out.println("Give me two numbers:");
 
     Scanner first = new Scanner(System.in);
-    Scanner second = new Scanner(System.in);
     int numbOne = first.nextInt();
-    int numbTwo = second.nextInt();
+    int numbTwo = first.nextInt();
 
     if (numbOne >= numbTwo) {
       System.out.println("The second number should be bigger");
