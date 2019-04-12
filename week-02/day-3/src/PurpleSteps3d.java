@@ -25,6 +25,7 @@ public class PurpleSteps3d {
 
 // starting points, size: 20, size has to be increased, --> starting points with the same
 // size legyen 20,30,40,50...
+
 // Don't touch the code below
 
   static int WIDTH = 320;

@@ -7,39 +7,29 @@ public class Colorsteps3D {
     // Reproduce this:
     // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
 
-    int x = 20;
-    int y = 20;
-    int size = 20;
-    graphics.setColor(new Color (212,69,69));
+    int x, y, size;
+    x = y = size = 10;
 
-    for (int i = 0; i < 10; i++){
-      graphics.fill3DRect(x, y, size, size,true);
+
+    for (int i = 0; i < 5; i++){
+      Color myNewColor = new Color(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+      graphics.setColor(myNewColor);
+      drawSteps(x,y,size+=(size/2),graphics);
       x += size;
       y += size;
-      size += 10;
     }
-
-    int q = 300;
-    int w = 20;
-    int sizeT = 20;
-    graphics.setColor(new Color (212,69,69));
-
-    for (int i = 0; i < 10; i++){
-      graphics.fill3DRect(q, w, sizeT, sizeT,true);
-      q -= sizeT;
-      w += sizeT;
-      sizeT += 10;
-
-    }
-
-
   }
+
+  public static void drawSteps (int x, int y, int size, Graphics graphics) {
+    graphics.fill3DRect(x, y, size, size,true);
+  }
+
+
 // RGB colors: https://www.rapidtables.com/web/color/RGB_Color.html
 
-// starting points, size: 20, size has to be increased, --> starting points with the same
-// size legyen 20,30,40,50...
-// Don't touch the code below
 
+
+// Don't touch the code below
   static int WIDTH = 320;
   static int HEIGHT = 320;
 

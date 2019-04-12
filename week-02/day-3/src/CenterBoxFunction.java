@@ -15,7 +15,6 @@ public class CenterBoxFunction {
       centeredbox(50, graphics);
     }
 
-
   }
   public static void centeredbox (int x, Graphics graphics){
     graphics.setColor(Color.yellow);

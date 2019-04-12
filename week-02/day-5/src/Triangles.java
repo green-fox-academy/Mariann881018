@@ -2,31 +2,27 @@ import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class LinePlay {
-  public static void mainDraw(Graphics graphics) { // for conditions has to be corrected
+public class Triangles {
+  public static void mainDraw(Graphics graphics) {
+    int xpoints[] = {WIDTH/2,};
+    int ypoints[] = {};
+    int apoints = 3;
 
-    int sX = 50;
-    int sY = 10;  //- starting point x,y
-    int eX = WIDTH-sY;
-    int eY = 20;  //- ending point x,y
+    graphics.drawPolygon(xpoints,ypoints,apoints);
 
-    graphics.setColor(new Color(166, 18,152));
-    for (int i = 0; i < (eY*13); i+=20) {
-      graphics.drawLine(sX+i, sY, eX, eY+i++);
-    }
-
-    int rX = 10;
-    int rY = 50;
-    int tX = 20;
-    int ty = HEIGHT-rX;
-
-    graphics.setColor(new Color(100,200,100));
-    for (int i = 0; i < (tX*13); i+=20) {
-      graphics.drawLine(rX, rY+i, tX+i++, ty);
-    }
   }
 
-// RGB colors: https://www.rapidtables.com/web/color/RGB_Color.html
+//    public static void drawTriangle() {
+//    }
+
+  /*
+   int xpoints[] = {25, 145, 25, 145, 25};
+    int ypoints[] = {25, 25, 145, 145, 25};
+    int npoints = 5;
+
+    g.drawPolygon(xpoints, ypoints, npoints);
+   */
+
 
 // Don't touch the code below
 
