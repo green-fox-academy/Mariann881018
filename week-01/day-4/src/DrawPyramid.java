@@ -12,7 +12,7 @@ public class DrawPyramid {
       for (int j = 1; j < i * 2; j++) {
         System.out.print("*");
       }
-      System.out.println(" ");
+      System.out.println();
     }
   }
 }

@@ -27,13 +27,3 @@ public class DiagonalMatrix {
 //   0 0 1 0
 //   0 0 0 1
 // Print this two dimensional array to the output
-/*
-two dimensional arrays:
-how to declare them:  int[][] arr = new int[4][4];
-how to print them:
-for (int i = 0; i < matrix.length; i++) {
-  for (int j = 0; j < matrix[i].length; j++) {
-    System.out.println(matrix[i][j]);
-      }
-    }
- */

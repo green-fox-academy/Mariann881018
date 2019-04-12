@@ -5,7 +5,7 @@ public class AppendA {
     String[] animals = {"koal", "pand", "zebr"};
 
     for (int i = 0; i < animals.length; i++) {
-      animals[i] += "a";  // adds an a to the end of each element
+      animals[i] += "a";  // adds an a to the end of each element of the animals list
     }
 
     for (String newString : animals) {

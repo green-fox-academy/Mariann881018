@@ -18,7 +18,6 @@ public class GuessTheNumber {
       } else if (guess > myNum){
         System.out.println("The stored number is lower");
       }
-
     } while (guess != myNum);
   }
 }

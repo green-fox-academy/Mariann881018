@@ -14,15 +14,4 @@ public class SwapElements {
 // - Create an array variable named `abc`
 //   with the following content: `["first", "second", "third"]`
 // - Swap the first and the third element of `abc`
-
 // print out the elements:
-//System.out.println(Arrays.toString(arr));   - de kell a java.util.Array hozzá
-/*
-    int a = 123;
-    int b = 526;
-
-    int temp = a;
-    a = b;
-    System.out.println("Now a is " + a);
-    System.out.println("and b is " + temp);
- */

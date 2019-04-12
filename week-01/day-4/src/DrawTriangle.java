@@ -5,7 +5,7 @@ public class DrawTriangle {
     Scanner num = new Scanner(System.in);
     int noOfRows = num.nextInt();
 
-    for( int row = 1; row <= noOfRows; row++ ){
+    for( int row = 2; row <= noOfRows; row++ ){
       for( int stars = 0; stars < row; stars++ ){
         System.out.print("*");
       }

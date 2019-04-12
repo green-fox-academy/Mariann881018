@@ -12,7 +12,7 @@ public class Cuboid {
     int surfArea = 2*a + 2*b + 2*c;
     int volume = a * b * c;
 
-    System.out.println("Surface Area: " + surfArea + "cm2");
-    System.out.println("Volume: " + volume + "cm3");
+    System.out.println("Surface Area: " + surfArea + " cm2");
+    System.out.println("Volume: " + volume + " cm3");
   }
 }

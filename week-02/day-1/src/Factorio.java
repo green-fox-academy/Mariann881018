@@ -1,5 +1,6 @@
 public class Factorio {
   public static void main(String[] args) {
+
     int input = 3;
     int fact = factorio(input);
     System.out.println(fact);

@@ -14,6 +14,8 @@ public class PartyIndicator {
 
     if (numBoys == numGirls && sum >= 20) {
       System.out.println("The party is excellent!");
+    } else if (numGirls == 0) {
+      System.out.println("Sausage party");
     } else if (sum >= 20 && (numBoys!=numGirls)) {
       System.out.println("Quite cool party!");
     } else if (sum < 20) {
