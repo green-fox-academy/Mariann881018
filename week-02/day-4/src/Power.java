@@ -19,7 +19,7 @@ public class Power {
     if ( m == 1 ){
       return n;
     } else {
-      return n * powerN(n, m-1);    //
+      return n * powerN(n, m-1);
     }
   }
 }

@@ -2,42 +2,29 @@ import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Colorsteps3D {
+public class StarryNight {
   public static void mainDraw(Graphics graphics) {
-    // Reproduce this:
-    // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
+    // Draw the night sky:
+    //  - The background should be black
+    //  - The stars can be small squares
+    //  - The stars should have random positions on the canvas
+    //  - The stars should have random color (some shade of grey)
 
-    int x, y, size;
-    x = y = size = 10;
+    graphics.setColor(Color.black);
+    graphics.fillRect(0,0,WIDTH,HEIGHT);
+    int size = 2;
+    int dens = 2000;
 
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < dens; i++) {
       Color myNewColor = new Color(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
       graphics.setColor(myNewColor);
-      drawSteps(x,y,size+=(size/2),graphics);
-      x += size;
-      y += size;
+      graphics.fillRect((int)(Math.random()*(WIDTH-size)), (int)(Math.random()*(HEIGHT-size)),size,size);
     }
   }
 
-  public static void drawSteps (int x, int y, int size, Graphics graphics) {
-    graphics.fill3DRect(x, y, size, size,true);
-  }
-
-
-  /*
-
-
-   */
-
-// RGB colors: https://www.rapidtables.com/web/color/RGB_Color.html
-
-
-
-// Don't touch the code below
-  static int WIDTH = 320;
-  static int HEIGHT = 320;
-
-
+  // Don't touch the code below
+  static int WIDTH = 1600;
+  static int HEIGHT = 900;
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -48,7 +35,6 @@ public class Colorsteps3D {
     jFrame.setVisible(true);
     jFrame.pack();
   }
-
 
 
   static class ImagePanel extends JPanel {

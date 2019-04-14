@@ -6,8 +6,7 @@ public class AppendAFunc {
   }
 
     public static String appendAFunc(String a){
-      String makeIt;
-      makeIt = a + "a";
+      String makeIt = a + "a";
       return makeIt;
     }
   }

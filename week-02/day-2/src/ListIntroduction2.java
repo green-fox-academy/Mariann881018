@@ -12,11 +12,12 @@ public class ListIntroduction2 {
     System.out.println("ListB now:" + listB);
     listA.add(3, "Kiwifruit");
     System.out.println("ListA now:" + listA);
-    System.out.println(listA.size());    //Compare the size of List A and List B
+    System.out.println("Size of list A: "+listA.size());    //Compare the size of List A and List B
+    System.out.println("Size of list B: "+listB.size());
     System.out.println("Index of Avocado in listA: " + listA.indexOf("Avocado"));
     System.out.println("Index of Durian in listB: " + listB.indexOf("Durian"));
     listB.addAll(Arrays.asList("Passion Fruit", "Pommelo"));
-    System.out.println("ListB now is: " + listB);
+    System.out.println("List B now is: " + listB);
     System.out.println(listA.get(2));
   }
 }

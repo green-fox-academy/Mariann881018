@@ -13,11 +13,11 @@ public class DiagonalMatrix {
       }
     }
 
-    for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[i].length; j++) {
+    for (int i = 0; i < matrix.length; i++) {  //prints out the rows
+      for (int j = 0; j < matrix[i].length; j++) {  // prints out the elements of a row
         System.out.print(matrix[i][j]);
       }
-      System.out.println();
+      System.out.println();  // goto new line
     }
   }
 }

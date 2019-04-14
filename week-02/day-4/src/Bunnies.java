@@ -5,12 +5,11 @@ public class Bunnies{
      int bunnies = 8;
      int ears = noOfEars(bunnies);
     System.out.println(ears);
-
   }
 
   public static int noOfEars(int a){
-    if (a == 1){
-      return 2;
+    if (a == 0){
+      return 0;
     } else {
       return  2 + noOfEars(a-1);
     }

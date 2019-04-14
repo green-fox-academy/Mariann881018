@@ -5,41 +5,28 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Checkerboard {
   public static void mainDraw(Graphics graphics) {
     // Fill the canvas with a checkerboard pattern.
-    // canvas: 500 x 500
-
-    int size = 40;
     graphics.setColor(Color.BLACK);
+    int size = 40;
+    int x = 0;
+    int y = 0;
 
-
-
-
-  }
-
-  /*
-  public class DrawChessTable {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Give me a number:");
-    int noOfRows = sc.nextInt();
-
-    for(int i =0; i < noOfRows; i++){
-      for(int j = 0; j < noOfRows; j++){
-        if( ( i + j ) % 2 == 0){
-          System.out.print("*");
+    for (int i = 0; i < 8; i++){
+      for (int j = 0; j < 8; j++){
+        if ((i + j) % 2 == 0) {
+          graphics.setColor(Color.black);
         } else {
-          System.out.print(" ");
+          graphics.setColor(Color.white);
         }
+        graphics.fillRect(x + size*j,y + size*i,size, size);
       }
-      System.out.println();
     }
   }
-}
-   */
+
 
 
   // Don't touch the code below
-  static int WIDTH = 500;
-  static int HEIGHT = 500;
+  static int WIDTH = 320;
+  static int HEIGHT = 320;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
@@ -62,3 +49,11 @@ public class Checkerboard {
     }
   }
 }
+/*
+        graphics.fillRect(x, y, size, size);
+        x += size;
+      }
+      x = 0;
+      y += size;
+    }
+ */

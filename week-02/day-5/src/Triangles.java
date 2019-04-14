@@ -4,31 +4,41 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Triangles {
   public static void mainDraw(Graphics graphics) {
-    int xpoints[] = {WIDTH/2,};
-    int ypoints[] = {};
-    int apoints = 3;
+    int x = WIDTH / 2;
+    int y = HEIGHT / 10;
 
-    graphics.drawPolygon(xpoints,ypoints,apoints);
 
-  }
+      for (int e = 0; e < 10; e++){
+        drawTriangle(x, y, graphics);
+        x += 10;
+        y += 15;
+      }
 
-//    public static void drawTriangle() {
-//    }
 
-  /*
-   int xpoints[] = {25, 145, 25, 145, 25};
-    int ypoints[] = {25, 25, 145, 145, 25};
-    int npoints = 5;
+    drawTriangle(x, y, graphics);
+    y+=15;
 
-    g.drawPolygon(xpoints, ypoints, npoints);
-   */
+    int r = WIDTH / 2;
+    int t = HEIGHT / 10;
+
+      for (int z = 0; z < 5; z++) {
+        drawTriangle(r, t, graphics);
+        r -= 10;
+        t += 15;
+      }
+    }
+
+
+  public static void drawTriangle(int x, int y, Graphics graphics) {
+    graphics.drawLine(x,y,x-10, y+15);
+    graphics.drawLine(x-10,y+15,x+10,y+15);
+    graphics.drawLine(x+10, y+15,x,y);
+ }
 
 
 // Don't touch the code below
-
   static int WIDTH = 320;
   static int HEIGHT = 320;
-
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
@@ -40,8 +50,6 @@ public class Triangles {
     jFrame.setVisible(true);
     jFrame.pack();
   }
-
-
 
   static class ImagePanel extends JPanel {
     @Override

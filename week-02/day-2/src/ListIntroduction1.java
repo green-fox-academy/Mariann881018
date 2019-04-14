@@ -17,21 +17,23 @@ public class ListIntroduction1 {
     for (String name: myList) {
       System.out.println(name);
     }
-      System.out.println("This is the end of task 9");
+      System.out.println();
 
     //Iterate through the list and print
     //1. William
     //2. John
     //3. Amanda
 
+    for (int i = 0; i < myList.size(); i++) {
+      System.out.println(i+1 + ". " + myList.get(i));
+    }
+
     myList.remove(1);
     System.out.println();
     for (String name: myList){
       System.out.println(name);
     }
-
     //Iterate through the list in a reversed order and print out each name
-
     myList.clear();
     System.out.println(myList);
 

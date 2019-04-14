@@ -1,18 +1,16 @@
-import java.util.Arrays;
 public class Reverse {
   public static void main(String[] args) {
     int[] aj = {3, 4, 5, 6, 7};
+    int[] newlist = new int[aj.length];
 
-    for (int i = 0; i < aj.length/2; i++) {
-      int newlist = aj[i];
-      aj[i] = aj[aj.length - 1 - i];
-      aj[aj.length - 1 - i] = newlist;
+    for (int i = 0; i < aj.length; i++) {   // go through the orig list and put elements in a new list, in reverse order
+      newlist[i] = aj[aj.length - 1 - i];   // newlist[0] legyen -- org list 5-1 -- > orig list4., then 3rd, then2n
     }
 
     System.out.print("The reverse order is: ");
 
-    for ( int j = 0; j < aj.length; j++){
-      System.out.print(aj[j]);
+    for ( int j = 0; j < newlist.length; j++) {
+      System.out.print(newlist[j]);
     }
   }
 }
@@ -21,9 +19,3 @@ public class Reverse {
 // - Reverse the order of the elements in `aj`
 // - Print the elements of the reversed `aj`
 
-/*  String[] abc = {"first", "second", "third"};
-    String s = abc[0];  // 0->third, 1->second, 2->first
-    abc[0] = abc[2];
-    abc[2] = s;
-    System.out.println(Arrays.toString(abc));
- */

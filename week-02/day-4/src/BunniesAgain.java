@@ -8,12 +8,9 @@ public class BunniesAgain {
     int bunnies = 5;
     int ears = noOfEars(bunnies);
     System.out.println(ears);
-
   }
 
-
   public static int noOfEars(int n) {
-
     if (n == 1) {
       return 2;
     } else if (n % 2 == 1) {

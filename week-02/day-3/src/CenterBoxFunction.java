@@ -9,17 +9,21 @@ public class CenterBoxFunction {
     // and draws a square of that size to the center of the canvas.
     // draw 3 squares with that function.
     // avoid code duplication.
+    centeredbox(50, graphics);
 
-
-    for (int i = 0; i < 3; i++ ){
-      centeredbox(50, graphics);
-    }
 
   }
-  public static void centeredbox (int x, Graphics graphics){
+
+  public static void centeredbox (int x, Graphics graphics) {
     graphics.setColor(Color.yellow);
-    graphics.fillRect((WIDTH/2) - (x/2), (HEIGHT/2) - (x/2), x, x);
+    graphics.fillRect((WIDTH / 2) - (x / 2), (HEIGHT / 2) - (x / 2), x, x);
+
+    for (int i = 0; i < 3; i++) {
+      graphics.fillRect((int)(Math.random()*(WIDTH-x)),(int) (Math.random()*(HEIGHT-x)),x,x);
+    }
   }
+
+
 
 
 

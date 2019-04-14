@@ -6,12 +6,13 @@ public class TodoPrint {
   public static void main(String... args){
 
     String todoText = " - Buy milk\n";
+    System.out.println(corrector(todoText));
+  }
+  public static String corrector (String origtext) {
     String todoTitle = "My todo: \n";
     String todoTextTwo = " - Download games \n";
     String todoTextThird = "\t - Diablo \n";
-    //String finalString = new String(todoTitle+todoText+todoTextTwo+ todoTextThird);
-    System.out.println(todoTitle.concat(todoText.concat(todoTextTwo.concat(todoTextThird))));
-
+    return todoTitle + origtext + todoTextTwo + todoTextThird;
   }
 }
 

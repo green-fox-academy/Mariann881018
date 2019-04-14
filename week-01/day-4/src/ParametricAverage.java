@@ -2,22 +2,23 @@ import java.util.Scanner;
 
 public class ParametricAverage {
   public static void main(String[] args) {
+      Scanner inputNo = new Scanner(System.in);
       System.out.println("Give me a number:");
-      Scanner num = new Scanner(System.in);
-      int a = num.nextInt();
+      int a = inputNo.nextInt();
+      int sum = 0;
+
 
 
       for (int i = 1; i <= a; i++) {
         System.out.println("Give me another number:");
+        int numbersToAdd = inputNo.nextInt();
+        sum = sum + numbersToAdd;
       }
-       a = num.nextInt();
-       a += num.nextInt();
 
+      double average = sum / a;
 
-
-
-    System.out.println("Sum: " + sum );
-    System.out.println("Average: " + average);
+      System.out.println("Sum: " + sum );
+      System.out.println("Average: " + (int) (average));
     }
   }
 
