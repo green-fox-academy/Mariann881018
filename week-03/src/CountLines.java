@@ -32,24 +32,3 @@ public class CountLines {
     }
   }
     }
-/*  //sumAges("assets/file.txt");
-  public static void sumAges(String path) {
-    Path src = Paths.get(path);
-    try {
-      List<String> data = Files.readAllLines(src);
-      data = Files.readAllLines(src);
-      int sum = 0;
-      for (String s : data) {
-        String[] arr = s.split(";");
-        sum += Integer.parseInt(arr[1]);
-      }
-      System.out.println(sum);
-    } catch (IOException e) {
-      e.printStackTrace();
-    } catch (NumberFormatException e) {
-      e.printStackTrace();
-    }
-  }
-}
-}
- */

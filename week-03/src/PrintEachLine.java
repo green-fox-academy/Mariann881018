@@ -20,7 +20,7 @@ public class PrintEachLine {
       for (String newString : linesOfFile) {
         System.out.println(linesOfFile.get(Integer.parseInt(newString)));
       }
-    } catch (IOException ex) {
+    } catch (Exception ex) {
       System.out.println("Unable to read file: my-file.txt");
     }
   }

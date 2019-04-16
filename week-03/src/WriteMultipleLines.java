@@ -30,7 +30,6 @@ public class WriteMultipleLines {
     } catch (IOException ex){
       System.out.println("Unable to write file: my-file.txt");
     }
-
   }
 }
 

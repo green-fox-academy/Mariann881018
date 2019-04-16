@@ -1,14 +1,25 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class test3 {
   public static void main(String[] args) {
-    int[] arr = {3,4,5,6} ;
+
+    Path src = Paths.get("sourcefile.txt");
+    Path dest = Paths.get("destinationfile.txt");
     try {
-      System.out.println(arr[10]);
-    } catch (ArrayIndexOutOfBoundsException ex){
-          System.out.println("bla bla bla");
+      List<String> lines = Files.readAllLines(src);
+      Files.write(dest, lines);
+      for (String s : lines) {
+        System.out.println(s);
+      }
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
-
-
-
-}
-
 }
