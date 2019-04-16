@@ -24,7 +24,7 @@ public class MapIntroduction1 {
     System.out.println();
     myMap.put(68, 'D');
     System.out.println(myMap.size());
-    System.out.println(myMap.get(99));
+    System.out.println(myMap.get(99));   // prints the value belonging to this key
     myMap.remove(97);
     System.out.println(myMap.containsKey(100));
     myMap.clear();

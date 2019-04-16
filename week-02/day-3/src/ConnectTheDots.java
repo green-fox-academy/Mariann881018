@@ -9,23 +9,28 @@ public class ConnectTheDots {
     // Connect these to get a box: {{10, 10}, {290,  10}, {290, 290}, {10, 290}}
     // Connect these: {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70},
     // {120, 100}, {85, 130}, {50, 100}}
+    int[][] drawbox = {
+            {10, 10},   // 10 = [0][0], 10 = [0][1]
+            {290, 10},  // 290 = [1][0], 10 = [1][1]
+            {290, 290}, // 290 = [2][0], 290 = [2][1]
+            {10, 290}}; // 10 = [3][0], 290 = [3][1]
 
-    int[][] drawbox = {{10, 10}, {290, 10}, {290, 290}, {10, 290}};
-    int[][] drawsthing = {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130},{50, 100}};
+    int[][] drawsthing = {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130}, {50, 100}};
 
-    connectLines(graphics, drawbox);
-    connectLines(graphics, drawsthing);
+    connectDots(drawbox,graphics);
+    connectDots(drawsthing,graphics);
   }
 
-  private static void connectLines(Graphics graphics, int[][] points) {
-
-    for (int i = 0; i < points.length - 1; i++) {
-      graphics.setColor(Color.GREEN);
-      graphics.drawLine(points[i][0], points[i][1], points[i + 1][0], points[i + 1][1]);
+  public static void connectDots (int[][] sth, Graphics graphics){
+    for (int i = 0; i < sth.length-1; i++) {  // -1 kell mert nincs 5.sorunk
+      graphics.setColor(Color.green);
+      graphics.drawLine(sth[i][0],sth[i][1],sth[i + 1][0],sth[i + 1][1]);
     }
-
-    graphics.drawLine(points[0][0], points[0][1], points[points.length - 1][0], points[points.length - 1][1]);
+    graphics.drawLine(sth[sth.length-1][0],sth[sth.length-1][1],sth[0][0],sth[0][1]);
+    //ide kell: startx[3][0],starty[3][1],
+    //          endx[0][0],endy[0][1]
   }
+
 
   // Don't touch the code below
   static int WIDTH = 320;
