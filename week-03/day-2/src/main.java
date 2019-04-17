@@ -3,13 +3,13 @@ public class main {
     ///////////////// Post-It exercise//////////////
 
     PostIt firstpostit = new PostIt("orange", "blue", "Idea 1");
-    firstpostit.printit();
+//    firstpostit.printit();
 
     PostIt secondpostit = new PostIt("pink", "black", "Awesome");
-    secondpostit.printit();
+  //  secondpostit.printit();
 
     PostIt thirdpostit = new PostIt("yellow", "green", "Superb!" );
-    thirdpostit.printit();
+  //  thirdpostit.printit();
 
     ///////////////// BlogPost exercise//////////////
 
@@ -18,7 +18,7 @@ public class main {
     firstblog.title = "Lorem Ipsum";
     firstblog.text = "Lorem ipsum dolor sit amet.";
     firstblog.publicationDate = "2000.05.04.";
-    firstblog.printIt();
+   // firstblog.printIt();
 
     BlogPost secondblog = new BlogPost();
     secondblog.authorname = "Tim Urban";
@@ -34,7 +34,31 @@ public class main {
 
     ///////////////// Animal exercise//////////////
 
-    Animal lion = new Animal("Leo", )
+    Animal lion = new Animal();
+    lion.name = "Leo";
+    lion.hunger = 70;
+    //lion.play();
+
+    Animal cat = new Animal();
+    cat.name = "Miau";
+    //cat.play();
+    //cat.play();
+
+    ///////////////// Sharpie exercise//////////////
+
+    Sharpie oneSharpie = new Sharpie();
+    //oneSharpie.use();
+    //oneSharpie.draw();
+
+    ///////////////// Counter exercise//////////////
+
+    Counter mycounter = new Counter(7);
+    mycounter.add(6);
+    mycounter.get();
+    System.out.println(mycounter.get());
+    mycounter.reset();
+    System.out.println(mycounter.get());
+
 
   }
 
