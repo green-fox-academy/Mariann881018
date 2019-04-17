@@ -12,7 +12,7 @@ public class test2 {
     Files.isDirectory(path);
     try {
       List<String> lines = Files.readAllLines(path);
-     // Files.write(path, lines);      // write the specific lines into the file
+      // Files.write(path, lines);      // write the specific lines into the file
       for (String line : Files.readAllLines(path)){
         System.out.println(line);
       }

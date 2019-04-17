@@ -36,23 +36,3 @@ public class Logs {
     }
   }
 }
-/* public static void IP(String fileName) {
-    try {
-      for (String line : lines) {
-        IPs.add(line.substring(27, 38));
-      }
-      for (String str : IPs) {
-        if (!UniqueIPs.contains(str)) {
-          UniqueIPs.add(str);
-        }
-      }
-      System.out.println(UniqueIPs);
-      System.out.println(UniqueIPs.size());
-
-    } catch (IOException e) {
-      e.printStackTrace();
-      System.out.println("Unable to read file: my-file.txt");
-    }
-  }
-}
- */

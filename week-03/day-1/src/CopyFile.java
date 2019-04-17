@@ -23,9 +23,8 @@ public class CopyFile {
       boolean b = true;
       List<String> lines = Files.readAllLines(sourceFile);   // arraylist named lines created to copy all lines of sourceFile
       Files.write(destFile,lines);
-      for (String s : lines) {        // iterated through lines to have the lines of sourceFile
-      //  System.out.println(s);
-      }
+      for (String s : lines) {        // iterates through lines to have the lines of sourceFile
+      }     //  System.out.println(s);
       System.out.println(b);
     } catch (FileNotFoundException e) {
       System.out.println("Copy unsuccessful");

@@ -25,7 +25,7 @@ public class WriteMultipleLines {
     try { Path sourceFile = Paths.get(path);
       for (int i = 0; i < n; i++){
         lines.add(inputWord);
-      Files.write(sourceFile,lines);}
+        Files.write(sourceFile,lines);}
       System.out.print(Files.readAllLines(sourceFile));
     } catch (IOException ex){
       System.out.println("Unable to write file: my-file.txt");
