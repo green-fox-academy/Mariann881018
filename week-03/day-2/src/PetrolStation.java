@@ -1,4 +1,20 @@
+import javax.sound.midi.Soundbank;
+
 public class PetrolStation {
+  public static void main(String[] args) {
+
+
+    Car myCar = new Car();
+
+    Station mol = new Station(1000);
+
+    System.out.println("mycar's current capacity: " + myCar.capacity + ", gas amount: " + myCar.gasAmount);
+    mol.refill(myCar);
+    System.out.println("mycar's new capacity: " + myCar.capacity + ", gas amount: " + myCar.gasAmount);
+    System.out.println("station's remaining gas amount: " + mol.gasAmount);
+
+  }
+
 }
 
 /*

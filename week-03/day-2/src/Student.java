@@ -10,7 +10,7 @@ public class Student {
   }
 
   public void question(Teacher teacher){
-    System.out.println("Could you please explain this....?");
+    System.out.println(teacher.nameT + "Could you please explain this....?");
   }
 
 }

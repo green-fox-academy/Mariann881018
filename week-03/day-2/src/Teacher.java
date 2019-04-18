@@ -6,7 +6,7 @@ public class Teacher {
   }
 
   public void teach(Student student){
-    System.out.println("Listen to me " + student.nameS + " I'll explain it");
+    System.out.println("Listen to me, " + student.nameS + " I'll explain it");
   }
 
   public void answer(){
