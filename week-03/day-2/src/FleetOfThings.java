@@ -24,8 +24,6 @@ public class FleetOfThings {
     myfleet.add(thing3);
     myfleet.add(thing4);
 
-
-
     System.out.println(myfleet.toString());
 
 

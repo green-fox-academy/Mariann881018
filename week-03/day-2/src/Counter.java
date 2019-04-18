@@ -36,6 +36,7 @@ Then run the tests with the green play button before the lines (run all of them 
 
   public void reset(){
     number = initialNum;
+
   }
 
 }
