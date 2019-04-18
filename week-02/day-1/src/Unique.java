@@ -9,7 +9,7 @@ public class Unique {
   }
 
   public static String unique(int[] myArray) {  // from stack overflow, stream has to be imported
-    int[] noDuplicates = IntStream.of(myArray).distinct().toArray(); // instream has method to remove duplicates
+    int[] noDuplicates = IntStream.of(myArray).distinct().toArray(); // instream has a method to remove duplicates
     return Arrays.toString(noDuplicates);
   }
 }

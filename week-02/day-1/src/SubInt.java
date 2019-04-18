@@ -12,7 +12,7 @@ public class SubInt {
     for (int i = 0; i < origArray.length; i++) {  // go through the list, put the index in the new list, if the element = a, or the number contains a
       if (origArray[i] == a || origArray[i] % 10 == a || origArray[i] / 10 == a) {
         newArray = Arrays.copyOf(newArray, newArray.length+1);
-        newArray[newArray.length - 1] = i; // -- newArray last element is the first element of orig array
+        newArray[newArray.length - 1] = i;
       }
     }
     return Arrays.toString(newArray);

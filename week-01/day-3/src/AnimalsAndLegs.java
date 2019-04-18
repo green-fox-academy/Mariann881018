@@ -8,7 +8,6 @@ public class AnimalsAndLegs {
     chicken = chickNum.nextInt();
 
     System.out.println("Please enter how many pigs the farm has:");
-    Scanner pigNum = new Scanner(System.in);
     pigs = pigNum.nextInt();
 
     int allLegs = chicken * 2 + pigs * 4;

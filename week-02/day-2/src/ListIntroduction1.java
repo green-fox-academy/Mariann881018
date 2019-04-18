@@ -25,7 +25,7 @@ public class ListIntroduction1 {
     //3. Amanda
 
     for (int i = 0; i < myList.size(); i++) {
-      System.out.println(i+1 + ". " + myList.get(i));
+      System.out.println(i + 1 + ". " + myList.get(i));
     }
 
     myList.remove(1);

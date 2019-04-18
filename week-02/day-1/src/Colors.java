@@ -5,14 +5,13 @@ public class Colors {
             {"orange red", "red", "tomato"},
             {"orchid", "violet", "pink", "hot pink"}};
 
-  /*    for(String[] i : colors) {  // goes through the elements of 0. row of colors array, stores each item in a one-D i array
+      for(String[] i : colors) {  // goes through the elements of 0. row of colors array, stores each item in a one-D i array
         for (String j : i) {      // goes through the elements of i array, puts elements in one long string
         System.out.print(j + ", ");  // prints the string with separator
       }
       System.out.println();   //
     }
 
-   */
 
 
     for (int i = 0; i < colors.length; i++){  //--loop through trows

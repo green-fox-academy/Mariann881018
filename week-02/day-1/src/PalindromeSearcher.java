@@ -3,10 +3,10 @@ import java.util.Arrays;
 public class PalindromeSearcher {
   public static void main(String[] args) {
     String origWord = "greenfox";
-    System.out.println(palindrome(origWord));
+    System.out.println(searchPalindrome(origWord));
   }
 
-  public static String palindrome(String origWord){
+  public static String searchPalindrome(String origWord){
     String error = "The original word should be at least 3 characters long";
     String[] newArray = {};
 

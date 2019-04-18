@@ -16,4 +16,16 @@ public class ElementFinder{
       result = "Noooooo";
     } return result;
   }
+
+  public static String containSeven(ArrayList<Integer> inputList){
+    String result;
+    List<Integer> nextList = new ArrayList<>(Arrays.asList(7));
+    if (inputList.containsAll(nextList)){
+     result = "Hoorray";
+    } else {
+      result = "Noooooo";
+    }
+    return result;
+  }
+
 }

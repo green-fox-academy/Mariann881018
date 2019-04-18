@@ -14,7 +14,7 @@ public class Matchmaking{
   public static ArrayList<String> makingMatches(ArrayList<String> girlsList, ArrayList<String> boysList){
     ArrayList<String> newList = new ArrayList<>(boysList);
     for (int i = 0; i < girlsList.size(); i++) {
-      newList.add(2*i, girlsList.get(i)); // every 2nd index insert girls into boysList
+      newList.add(2*i, girlsList.get(i)); // to every 2nd index insert girls into boysList
     }
     return newList;
   }

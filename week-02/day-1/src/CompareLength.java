@@ -9,6 +9,7 @@ public class CompareLength {
       System.out.println("pl2 has more elements");
     } else
       System.out.println("pl1 has more elements");
+
   }
 }
 
