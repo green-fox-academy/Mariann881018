@@ -53,7 +53,7 @@ public class DiceSet {
 
     diceSet.roll();
     for (int z: ids){
-      goal.add(Integer.valueOf(z));
+      goal.add(z);
     }
     System.out.println("Goal: " + goal);
 

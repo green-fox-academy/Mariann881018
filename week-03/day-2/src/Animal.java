@@ -11,9 +11,10 @@ Every animal can play() which increases both by one
 
   int hunger;
   int thirst = 50;
-  String name;
+  String type;
 
-  public Animal(){
+  public Animal(String type){
+
   }
 
   public void eat(){
@@ -32,8 +33,8 @@ Every animal can play() which increases both by one
     System.out.println("playing...");
     hunger += 1;
     thirst += 1;
-    System.out.println(name + "'s thirst level: " + thirst);
-    System.out.println(name + "'s hunger level: " + hunger);
+    System.out.println(type + "'s thirst level: " + thirst);
+    System.out.println(type + "'s hunger level: " + hunger);
 
   }
 

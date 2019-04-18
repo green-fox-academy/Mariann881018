@@ -34,33 +34,43 @@ public class main {
 
     ///////////////// Animal exercise//////////////
 
-    Animal lion = new Animal();
-    lion.name = "Leo";
+    Animal lion = new Animal("lion");
+    lion.type = "lion";
     lion.hunger = 70;
     //lion.play();
 
-    Animal cat = new Animal();
-    cat.name = "Miau";
+    Animal cat = new Animal("cat");
+    cat.type = "cat";
     //cat.play();
     //cat.play();
 
-    ///////////////// Sharpie exercise//////////////
-
-    Sharpie oneSharpie = new Sharpie();
-    //oneSharpie.use();
-    //oneSharpie.draw();
 
     ///////////////// Counter exercise//////////////
 
     Counter mycounter = new Counter(7);
     mycounter.add(6);
     mycounter.get();
-    System.out.println(mycounter.get());
+    //System.out.println(mycounter.get());
     mycounter.reset();
-    System.out.println(mycounter.get());
+    //System.out.println(mycounter.get());
+
+
+    ///////////////// Sharpie exercise//////////////
+
+    Sharpie oneSharpie = new Sharpie();
+    Sharpie twoSharpie = new Sharpie();
+    oneSharpie.use();
+    oneSharpie.draw();
+    twoSharpie.use();
+    twoSharpie.use();
+    twoSharpie.use();
+    twoSharpie.draw();
+
+    SharpieSet newSet = new SharpieSet();
+    newSet.countUsable();
+
 
 
   }
-
 
 }

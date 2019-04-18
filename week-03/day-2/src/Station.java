@@ -11,9 +11,9 @@ public class Station {
     car.gasAmount += gasAmount;
     System.out.println("Car refilled");
   }
-
-
 }
+
+
 /*
 gasAmount = gasAmount - carCapacity
 cars.gasAmount

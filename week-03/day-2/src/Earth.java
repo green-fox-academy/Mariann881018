@@ -9,7 +9,6 @@ public class Earth {
     tom.name = "Tom";
     tom.speak();
 
-
   }
 
 }

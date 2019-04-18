@@ -34,10 +34,3 @@ public class PokemonMain {
     return pokemon;
   }
 }
-
-/*
-  public static String bubble(int[] origlist) {
-    Arrays.sort(origlist);
-    String sortedlist = Arrays.toString(origlist);
-    return sortedlist;
- */

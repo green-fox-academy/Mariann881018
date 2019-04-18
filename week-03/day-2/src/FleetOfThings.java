@@ -26,10 +26,5 @@ public class FleetOfThings {
 
     System.out.println(myfleet.toString());
 
-
-
   }
 }
-/*
-
- */
