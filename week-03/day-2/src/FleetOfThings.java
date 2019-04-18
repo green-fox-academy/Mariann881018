@@ -11,16 +11,22 @@ public class FleetOfThings {
 
     System.out.println(fleet);
 
-    Thing thing1 = new Thing("[ ] Get milk");
-    Thing thing2 = new Thing("[ ] Remove the obstacles");
-    Thing thing3 = new Thing("[x] Stand up");
-    Thing thing4 = new Thing("[x] Eat lunch");
+    Thing thing1 = new Thing("Get milk");
+    Thing thing2 = new Thing("Remove the obstacles");
+    Thing thing3 = new Thing("Stand up");
+    Thing thing4 = new Thing("Eat lunch");
+    thing3.complete();
+    thing4.complete();
 
     Fleet myfleet = new Fleet();
     myfleet.add(thing1);
     myfleet.add(thing2);
     myfleet.add(thing3);
     myfleet.add(thing4);
+
+
+
+    System.out.println(myfleet.toString());
 
 
 
