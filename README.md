@@ -8,4 +8,4 @@
 
 You can find all my repositories [here](https://github.com/Mariann881018?tab=repositories).
 
-I am in the **English speaking Java class** named *Otters* you can checkout out our syllabus [here](https://github.com/green-fox-academy/otters-syllabus).
+I am in the **English speaking Java class** named *Otters*, you can checkout out our syllabus [here](https://github.com/green-fox-academy/otters-syllabus).
