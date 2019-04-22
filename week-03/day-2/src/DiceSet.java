@@ -28,40 +28,26 @@ public class DiceSet {
   public void reroll(int k) {
     dice.set(k, (int) (Math.random() * 6) + 1);
   }
-
   public static void main(String[] args) {
-
     DiceSet diceSet = new DiceSet();
-    System.out.println(diceSet.getCurrent());
     System.out.println(diceSet.roll());
-    System.out.println(diceSet.getCurrent());
-    System.out.println(diceSet.getCurrent(5));
-    diceSet.reroll();
-    System.out.println(diceSet.getCurrent());
-    diceSet.reroll(4);
-    System.out.println(diceSet.getCurrent());
-    Integer[] ids = {6, 6, 6, 6, 6, 6};
-    ArrayList<Integer> goal = new ArrayList<Integer>(ids.length);
-
-    diceSet.roll();
-    for (int z: ids){
-      goal.add(z);
+    for (int i = 0; i < 6; i++) {
+      while (diceSet.getCurrent(i) != 6) {
+        diceSet.reroll(i);
+      }
     }
-    System.out.println("Goal: " + goal);
-
-    do {
-      diceSet.reroll() ;
-    } while (diceSet.getCurrent().equals(goal));
     System.out.println(diceSet.getCurrent());
   }
+
 }
 
-// goal: [6, 6, 6, 6, 6, 6]
-// diceSet.getCurrent() = {6,6,6,6,6,6}
-/*
-    You have a `DiceSet` class which has a list for 6 dice
-    You can roll all of them with roll()
-    Check the current rolled numbers with getCurrent()
-    You can reroll with reroll()
-    Your task is to roll the dice until all of the dice are 6
- */
+//  public static void main(String[] args) {
+//    DiceSet diceSet = new DiceSet();
+//    System.out.println(diceSet.roll());
+//    for (int i = 0; i < 6; i++) {
+//      while (diceSet.getCurrent(i) != 6){
+//        diceSet.reroll(i);
+//      }
+//    }
+//    System.out.println(diceSet.getCurrent());
+//  }

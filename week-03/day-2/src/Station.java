@@ -7,8 +7,8 @@ public class Station {
   }
 
   public void refill(Car car){
-    this.gasAmount -= (car.capacity);
-    car.gasAmount += gasAmount;
+    this.gasAmount -= car.capacity;
+    car.gasAmount += car.capacity;
     System.out.println("Car refilled");
   }
 }
