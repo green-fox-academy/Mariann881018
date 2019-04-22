@@ -14,7 +14,7 @@ public class ProductDatabase {
     System.out.println("Price of fish: " + checkPrice(productDatabase, "Fish"));
     System.out.println("The most expensive is: " + mostExpensive(productDatabase));
     System.out.println("The average price is: " + average(productDatabase));
-    System.out.println("How many products' price is below 30: " + prodfor300(productDatabase));
+    System.out.println("How many products' price is below 30? " + prodfor300(productDatabase));
     System.out.println("Anything for 125? " + anythingfor125(productDatabase));
     System.out.println("What is the cheapest product?" + cheapest(productDatabase));
   }

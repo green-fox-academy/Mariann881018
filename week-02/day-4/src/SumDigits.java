@@ -18,28 +18,5 @@ public class SumDigits {
     }
   }
 }
-/*
 
-n=12345
 
-1+2+3+4+5
-12345%10 - 5  --
-1234%10 - 4
-123%3  - 3
-12%10 - 2
-1%
-
-12345/10  - 1234
-1234/10   - 123
-123 /10   - 12
-12 /10    - 1
-1/
-
-  public static int numberAdder(int num) {
-    if (num == 0){
-      return num;
-    } else {
-      return num + numberAdder(num -1);
-  }
-
- */

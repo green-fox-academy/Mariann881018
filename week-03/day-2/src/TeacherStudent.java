@@ -1,5 +1,3 @@
-import java.util.SplittableRandom;
-
 public class TeacherStudent {
   public static void main(String[] args) {
 
@@ -12,17 +10,5 @@ public class TeacherStudent {
     student2.learn();
     teacher.teach(student2);
     teacher.answer();
-
   }
-
 }
-
-/*
-Create Student and Teacher classes
-Student
-    learn()
-    question(teacher) -> calls the teachers answer method
-Teacher
-    teach(student) -> calls the students learn method
-    answer()
- */

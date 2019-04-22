@@ -1,5 +1,6 @@
 public class FarmMain {
   public static void main(String[] args) {
+
     Farm myFarm = new Farm(3);
 
     Animal chicken = new Animal("chicken");
@@ -14,10 +15,7 @@ public class FarmMain {
     myFarm.breed();
     myFarm.breed();
     System.out.println(myFarm.animals.size());
-
-
   }
-
 }
 
 /*

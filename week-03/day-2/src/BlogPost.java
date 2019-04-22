@@ -1,15 +1,11 @@
 public class BlogPost {
-  /*
-Create a BlogPost class that has an authorName, a title, a text, a publicationDate
 
-   */
   String authorname;
   String title;
   String text;
   String publicationDate;
 
   public BlogPost(){
-
   }
 
   public void printIt(){
@@ -18,6 +14,7 @@ Create a BlogPost class that has an authorName, a title, a text, a publicationDa
     System.out.println(text);
     System.out.println(publicationDate);
   }
-
-
 }
+  /*
+Create a BlogPost class that has an authorName, a title, a text, a publicationDate
+   */

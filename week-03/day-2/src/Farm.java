@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Farm {
-
    static int slots;
    static ArrayList<Animal> animals;
 
@@ -12,10 +11,9 @@ public class Farm {
     animals = new ArrayList<>();
   }
 
-  public void add(Animal animal) {
-    animals.add(animal);
-  }
-
+   public void add(Animal animal) {
+   animals.add(animal);
+   }
 
   void breed(){
 
@@ -26,9 +24,7 @@ public class Farm {
    // void slaughter(){
     //  animals.remove()
    // }
-
   }
-
 }
 /*
 Reuse your Animal class

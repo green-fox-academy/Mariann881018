@@ -1,29 +1,35 @@
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PalindromeSearcher {
   public static void main(String[] args) {
-    String origWord = "greenfox";
-    System.out.println(searchPalindrome(origWord));
+    String origWord = "racecar";
+    System.out.println(findAllPalindromes(origWord));
   }
 
-  public static String searchPalindrome(String origWord){
+  public static Set<String> findAllPalindromes(String input) {
     String error = "The original word should be at least 3 characters long";
-    String[] newArray = {};
+    Set<String> palindromes = new HashSet<>();
 
-    if (origWord.length()< 3 ) {
-     return error;
+    if (input.length()< 3 ) {
+      return Collections.singleton(error);
+    } else {
+      for (int i = 0; i < input.length(); i++) {
+        palindromes.addAll(findPalindromes(input, i, i + 1));
+        palindromes.addAll(findPalindromes(input, i, i));
+      }
+      return palindromes;
     }
+  }
 
-    return Arrays.toString(newArray);
+  private static Set<String> findPalindromes(String input, int low, int high) {
+    Set<String> result = new HashSet<>();
+    while (low >= 0 && high < input.length() && input.charAt(low) == input.charAt(high)) {
+      result.add(input.substring(low, high + 1));
+      low--;
+      high++;
+    }
+    return result;
   }
 }
-
-/*
-Create a function named search palindrome following your current language's style guide.
-It should take a string, search for palindromes that at least 3 characters long and return a list with the found palindromes.
-Examples
-input                                 output
-"dog goat dad duck doodle never"      ["og go", "g g", " dad ", "dad", "d d", "dood", "eve"]
-"apple"                               []
-"racecar"                             ["racecar", "aceca", "cec"]
- */

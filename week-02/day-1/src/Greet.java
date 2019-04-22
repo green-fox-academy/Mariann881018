@@ -9,5 +9,4 @@ public class Greet {
     hello = "Greetings dear, " + a;
     return hello;
   }
-
 }

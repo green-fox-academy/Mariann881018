@@ -1,6 +1,5 @@
 public class Earth {
   public static void main(String[] args) {
-
     Human tom;
     tom = new Human();
     tom.age = 5;
@@ -8,7 +7,5 @@ public class Earth {
     tom.heightInIn = 72;
     tom.name = "Tom";
     tom.speak();
-
   }
-
 }

@@ -7,35 +7,36 @@ import java.util.List;
 
 public class TicTacToe {
   public static void main(String[] args) {
-    // Write a function that takes a filename as a parameter. The file contains an ended Tic-Tac-Toe match
-    // We have provided you some example files (draw.txt, win-x.txt, win-o.txt). Return "X", "O" or "Draw" based on the input file
-    //System.out.println(ticTacResult("win-o.txt"));  // Should print "O"
-    //System.out.println(ticTacResult("win-x.txt")); // Should print "X"
-    System.out.println(ticTacResult("draw.txt")); // Should print "Draw"
-  }
-  public static String ticTacResult(String file) {
-    Path inputfile = Paths.get(file);
-    List<String> linesOfFile = new ArrayList<>();
     try {
-      linesOfFile = Files.readAllLines(inputfile);
-      String result = "TicTac";
-      //   for (String s : linesOfFile) {
-      if (linesOfFile.get(0) =="O") {                   // s.startWith("OXO") == true
-        result = "O";
-      } else if (linesOfFile.get(0)=="X" && linesOfFile.get(2)== "O") {  //s.startsWith("XOO") == true  //else if (s.substring(0,2)== "XOO")
-        result = "X";
-      } else if (linesOfFile.get(0)== "X" && linesOfFile.get(2)== "X") {  // s.startsWith("XOX") == true
-        result = "Draw";
+      System.out.println(ticTacResult("win-x.txt")); // Should print "Draw"
+    } catch (Exception e) {
+      System.out.println("cannot find the file");
+    }
+  }
+
+  private static String ticTacResult(String fileName) throws Exception {
+    Path filePath = Paths.get(fileName);
+    List<String> content = Files.readAllLines(filePath);
+
+    char[][] chars = new char[3][3];
+    chars[0] = content.get(0).toCharArray(); // puts the first line of file to a char array named chars[0]
+    chars[1] = content.get(1).toCharArray(); // puts the 2nd line...
+    chars[2] = content.get(2).toCharArray(); // puts the 3rd line to chars[2] array
+
+    if ((chars[1][1] == chars[0][0] && chars[1][1] == chars[2][2]) ||
+            (chars[1][1] == chars[0][2] && chars[1][1] == chars[2][0])) {
+      return String.valueOf(chars[1][1]);
+    }
+
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        if (chars[i][0] == chars[i][1] && chars[i][0] == chars[i][2]) {
+          return String.valueOf(chars[i][0]);
+        } else if (chars[0][j] == chars[1][j] && chars[0][j] == chars[2][j]) {
+          return String.valueOf(chars[j][0]);
+        }
       }
-      //}
-      return result;
-    } catch (IOException e) {
-      System.out.println("I cannot read the file!");
-    } return result;
+    }
+    return "draw"; // Draw
   }
 }
-
-
-/*
-
- */

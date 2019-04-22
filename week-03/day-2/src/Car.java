@@ -3,10 +3,7 @@ public class Car {
   int capacity = 100;
 
   public Car(){
-    this.gasAmount = gasAmount;
-    this.capacity = capacity;
   }
-
 }
 
 

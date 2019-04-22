@@ -54,7 +54,6 @@ public class main {
     mycounter.reset();
     //System.out.println(mycounter.get());
 
-
     ///////////////// Sharpie exercise//////////////
 
     Sharpie oneSharpie = new Sharpie();
@@ -68,9 +67,5 @@ public class main {
 
     SharpieSet newSet = new SharpieSet();
     newSet.countUsable();
-
-
-
   }
-
 }

@@ -7,7 +7,6 @@ public class Doubling {
     int result = doubling(baseNum);
     System.out.println(result);
   }
-
   public static int doubling(int n1){
     int d;
     d = n1*2;

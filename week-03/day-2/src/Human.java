@@ -1,12 +1,10 @@
 public class Human {
-
   String name;
   int age;
   int heightInIn;
   String eyeColor;
 
   public Human(){
-
   }
 
   public void speak (){
@@ -22,8 +20,4 @@ public class Human {
   public void walk(){
     System.out.println("walking....");
   }
-
 }
-
-
-
