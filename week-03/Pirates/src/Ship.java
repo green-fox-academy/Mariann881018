@@ -56,8 +56,8 @@ public class Ship {
       othership.winner = true;
     }
 
-    if (!winner){
-      
+    if  (!winner){
+
     }
   }
 }
