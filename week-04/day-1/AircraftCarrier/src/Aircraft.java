@@ -2,10 +2,18 @@ public class Aircraft {
   private int ammo;
   private String type;
   private int baseDamage;
+  private int allDamage;
+  private boolean isPrio;
 
-  public Aircraft(){
-    int ammo = 0;
+  public Aircraft(){   //All aircrafts should be created with an empty ammo storage
+    this.ammo = 0;
+  }
 
+  public Aircraft(String type, int ammo, int baseDamage){
+    this.type = type;
+    this.ammo = ammo;
+    this.baseDamage = baseDamage;
+    this.allDamage = baseDamage * ammo;
   }
 
   public int getAmmo() {
@@ -13,32 +21,55 @@ public class Aircraft {
   }
 
   public String getType() {
-    return type;
+    return this.type;
   }
+
+  public int getBaseDamage() {
+    return this.baseDamage;
+  }
+
+  public int getAllDamage() {
+    return this.allDamage;
+  }
+
   void getStatus(){
-    System.out.println("Type: " + getType() + ", Ammo: " + getAmmo() + ", Base damage: " + );
+    System.out.println("Type: " + getType() + ", Ammo: " + getAmmo() + ", Base damage: "
+            + getBaseDamage() + ", All damage: " + getAllDamage());
   }
-  //Type F35, Ammo: 10, Base Damage: 50, All Damage: 500
-}
 
+  public void setBaseDamage(int baseDamage) {
+    this.baseDamage = baseDamage;
+  }
+
+  public void setAmmo(int ammo) {
+    this.ammo = ammo;
+  }
+
+   public int fight(){
+    int dealtDamage = getAmmo() * getBaseDamage();
+    setAmmo(0);
+    return dealtDamage;
+  }
+
+  public int refill(int a){
+    int remaining = 0;
+
+    remaining = a - getAmmo();
+    return remaining;
+  }
 /*
-Create a class that represents an aircraft
-There are 2 types of aircrafts: F16 and F35
-Both aircrafts should keep track of their ammunition
-
-Methods:
-fight
-  It should use all the ammo (set it to 0) and it should return the damage it deals
-  The damage dealt is calculated by multiplying the base damage by the ammunition
 refill
-  It should take a number as parameter and substract as much ammo as possibe
-  It can't have more ammo than the number or the max ammo (can't get more ammo than what's coming from the parameter or the max ammo of the aircraft)
+  It should take a number as parameter and subtract as much ammo as possible
+  It can't have more ammo than the number or the max ammo (can't get more ammo than what's coming from the parameter
+     or the max ammo of the aircraft)
   It should return the remaining ammo
   Eg. Filling an empty F35 with 300 would completely fill the storage of the aircraft and would return the remaining 288
-getType
-  It should return the type of the aircraft as a string
-getStatus
-  It should return a string like: Type F35, Ammo: 10, Base Damage: 50, All Damage: 500
-isPriority
-  It should return if the aircraft is priority in the ammo fill queue. It's true for F35 and false for F16
+
  */
+
+
+  public boolean isPriority(){
+    return this.isPrio;
+  }
+}
+
