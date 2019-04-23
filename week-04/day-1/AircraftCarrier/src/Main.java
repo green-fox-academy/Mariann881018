@@ -13,7 +13,7 @@ public class Main {
     Carrier boss = new Carrier(2999,5000);
     boss.addAircraft(myf16);
     boss.addAircraft(myf35);
-   // boss.getStatus();
+    boss.getStatus();
     System.out.println(boss.totalDamage());
 
   }

@@ -65,23 +65,3 @@ public class Carrier extends Aircraft{
     }
   }
 }
-
-/*
-Methods:
- - fill
-    It should fill all the aircraft with ammo and subtracts the needed ammo from the ammo storage
-    If there is not enough ammo then it should start to fill the aircraft is with priority first
-    If there is no ammo when this method is called, it should throw an exception fight
-    It should take another carrier as a reference parameter and fire all the ammo from the aircraft's to it, then subtracts all the damage from its health points
-
-HP: 5000, Aircraft count: 5, Ammo Storage: 2300, Total damage: 2280
-Aircrafts:
-Type F35, Ammo: 12, Base Damage: 50, All Damage: 600
-Type F35, Ammo: 12, Base Damage: 50, All Damage: 600
-Type F35, Ammo: 12, Base Damage: 50, All Damage: 600
-Type F16, Ammo: 8, Base Damage: 30, All Damage: 240
-Type F16, Ammo: 8, Base Damage: 30, All Damage: 240
-
-If the health points are 0 then it should return: It's dead Jim :(
-
- */
