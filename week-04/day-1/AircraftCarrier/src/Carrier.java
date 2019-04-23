@@ -58,9 +58,9 @@ public class Carrier extends Aircraft{
     } else {
       System.out.println("HP: " + this.healthPoints + ", Aircraft count: " + aircrafts.size() + ", Ammo Storage: "
               + this.storeOfAmmo + ", Total damage: " + totalDamage() + "\n"
-      + "Aircrafts:\n");
-      for (int i = 0; i < aircrafts.size(); i++){
-        System.out.println();
+      + "Aircrafts:");
+      for (Aircraft aircraft : aircrafts){
+        aircraft.getStatus();
       }
     }
   }

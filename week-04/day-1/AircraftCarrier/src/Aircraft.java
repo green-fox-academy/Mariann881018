@@ -10,7 +10,7 @@ public class Aircraft {
   }
 
   public int getCurrentAmmo() {
-    return currentAmmo;
+    return this.currentAmmo;
   }
 
   public void setCurrentAmmo(int currentAmmo) {
