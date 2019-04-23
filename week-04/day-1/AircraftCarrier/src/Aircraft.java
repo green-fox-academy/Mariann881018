@@ -69,9 +69,3 @@ public class Aircraft {
     return priority;
   }
 }
-
-/*
-how to return class' name:
-String className = this.getClass().getSimpleName();
- */
-
