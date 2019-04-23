@@ -1,12 +1,18 @@
 public class Main {
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
+    Flower oneFlower = new Flower("yellow",2,true);
+    Flower twoFlower = new Flower("blue",4,true);
+
+    Tree oneTree = new Tree("purple",9,true);
+    Tree secTree = new Tree("orange",4,true);
 
 
 
   }
 }
 /*
+
 The task is to create a garden application, so in your main method you should create a garden with flowers and trees.
 
 The program should demonstrate an example garden with two flowers (yellow and blue) and two trees (purple and orange).

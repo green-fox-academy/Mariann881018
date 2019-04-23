@@ -1,75 +1,77 @@
 public class Aircraft {
-  private int ammo;
-  private String type;
+  private int currentAmmo;
   private int baseDamage;
   private int allDamage;
-  private boolean isPrio;
+  private int maxAmmo;
+  boolean priority;
 
-  public Aircraft(){   //All aircrafts should be created with an empty ammo storage
-    this.ammo = 0;
+  public Aircraft(){
+    this.setCurrentAmmo(0); // All aircrafts should be created with an empty ammo storage
   }
 
-  public Aircraft(String type, int ammo, int baseDamage){
-    this.type = type;
-    this.ammo = ammo;
-    this.baseDamage = baseDamage;
-    this.allDamage = baseDamage * ammo;
+  public int getCurrentAmmo() {
+    return currentAmmo;
   }
 
-  public int getAmmo() {
-    return ammo;
-  }
-
-  public String getType() {
-    return this.type;
+  public void setCurrentAmmo(int currentAmmo) {
+    this.currentAmmo = currentAmmo;
   }
 
   public int getBaseDamage() {
-    return this.baseDamage;
-  }
-
-  public int getAllDamage() {
-    return this.allDamage;
-  }
-
-  void getStatus(){
-    System.out.println("Type: " + getType() + ", Ammo: " + getAmmo() + ", Base damage: "
-            + getBaseDamage() + ", All damage: " + getAllDamage());
+    return baseDamage;
   }
 
   public void setBaseDamage(int baseDamage) {
     this.baseDamage = baseDamage;
   }
 
-  public void setAmmo(int ammo) {
-    this.ammo = ammo;
+  public int getAllDamage() {
+    return allDamage;
   }
 
-   public int fight(){
-    int dealtDamage = getAmmo() * getBaseDamage();
-    setAmmo(0);
-    return dealtDamage;
+  public int getMaxAmmo() {
+    return maxAmmo;
   }
 
-  public int refill(int a){
-    int remaining = 0;
-
-    remaining = a - getAmmo();
-    return remaining;
+  public void setMaxAmmo(int maxAmmo) {
+    this.maxAmmo = maxAmmo;
   }
-/*
-refill
-  It should take a number as parameter and subtract as much ammo as possible
-  It can't have more ammo than the number or the max ammo (can't get more ammo than what's coming from the parameter
-     or the max ammo of the aircraft)
-  It should return the remaining ammo
-  Eg. Filling an empty F35 with 300 would completely fill the storage of the aircraft and would return the remaining 288
 
- */
+  public int fight(){
+    int allDamage = getBaseDamage()*getCurrentAmmo();
+    setCurrentAmmo(0);
+    return allDamage;
+  }
 
+  public int refill(int number){
+    int remainingAmmo = 0;
+    int needed = getMaxAmmo() - getCurrentAmmo();
+    if (needed < number) {
+      remainingAmmo = number - needed;
+      setCurrentAmmo(getCurrentAmmo()+ needed);
+    } else {
+      setCurrentAmmo(getCurrentAmmo()+ number);
+      remainingAmmo = 0;
+    }
+    return remainingAmmo;
+  }
+
+  public String getType() {
+    return this.getClass().getSimpleName();
+  }
+
+  public void getStatus(){
+    System.out.println("Type: " + getType() + ", Ammo: " + getCurrentAmmo() + ", Base Damage: " + getBaseDamage()
+            + ", All Damage: " + this.fight());
+  }
 
   public boolean isPriority(){
-    return this.isPrio;
+    return priority;
   }
 }
+
+/*
+how to return class' name:
+String className = this.getClass().getSimpleName();
+ */
 

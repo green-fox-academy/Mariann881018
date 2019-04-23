@@ -10,6 +10,13 @@ public class Tree extends Plant{
     }
   }
 
+  @Override
+  void watering(int num) {
+    if (needsWater) {
+      this.wateramount += (num * 0.4);
+    }
+  }
+
 }
 
 /*
