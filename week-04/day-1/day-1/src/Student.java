@@ -13,8 +13,22 @@ public class Student extends Person{
     this.skippedDays = 0;
   }
 
+  void skipDays(int numberOfDays){
+    this.skippedDays += numberOfDays;
+  }
 
+  @Override
+  void introduce(){
+    super.introduce();
+    System.out.print(" from " + this.prevOrg + ", who skipped " + this.skippedDays + " days from the course already. \n");
+  }
+
+  @Override
+  void getGoal(){
+    System.out.println("My goal is: Be a junior software developer.");
+  }
 }
+
 /*
 Create a Student class that has the same fields and methods as the Person class, and has the following additional
 fields:

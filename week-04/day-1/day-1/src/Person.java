@@ -16,7 +16,11 @@ public class Person {
   }
 
   void introduce(){
-    System.out.println("Hi, I'm " + this.name + ", a " + this.age + " year old " + this.gender);
+    System.out.print("Hi, I'm " + this.name + ", a " + this.age + " year old " + this.gender + " ");
+  }
+
+  void getGoal(){
+    System.out.println("My goal is: Live for the moment!");
   }
 }
 
