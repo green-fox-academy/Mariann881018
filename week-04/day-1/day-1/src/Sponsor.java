@@ -1,15 +1,24 @@
 public class Sponsor extends Person {
-  String company;
-  int hiredStudents;
+  private String company;
+  private int hiredStudents;
 
   public Sponsor(){
-
+    this.company = "Google";
+    this.hiredStudents = 0;
   }
 
   public Sponsor(String name, int age, String gender, String company){
     super(name,age,gender);
-    this.company = "Google";
-    this.hiredStudents = 0;
+    this.company = company;
+
+  }
+
+  public String getCompany() {
+    return company;
+  }
+
+  public int getHiredStudents() {
+    return hiredStudents;
   }
 
   @Override
@@ -20,7 +29,7 @@ public class Sponsor extends Person {
   @Override
   void introduce(){
     super.introduce();
-    System.out.print( "who represents " + this.company + " and hired " + this.hiredStudents + " students so far. \n");
+    System.out.print( "who represents " + this.getCompany() + " and hired " + this.getHiredStudents() + " students so far. \n");
   }
 
   void hire(){

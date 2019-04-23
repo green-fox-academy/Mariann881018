@@ -1,7 +1,7 @@
 public class Person {
-  String name;
-  int age;
-  String gender;
+  private String name;
+  private int age;
+  private String gender;
 
   public Person(){
     this.name = "Jane Doe";
@@ -15,8 +15,23 @@ public class Person {
     this.gender = gender;
   }
 
+  public String getName() {
+    return name;
+  }
+
+
+  public int getAge() {
+    return age;
+  }
+
+
+  public String getGender() {
+    return gender;
+  }
+
+
   void introduce(){
-    System.out.print("Hi, I'm " + this.name + ", a " + this.age + " year old " + this.gender + " ");
+    System.out.print("Hi, I'm " + this.getName() + ", a " + this.getAge() + " year old " + this.getGender() + " ");
   }
 
   void getGoal(){

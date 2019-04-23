@@ -6,9 +6,6 @@ public class Cohort {
   List<Student> students;
   List<Mentor> mentors;
 
-  public Cohort(){
-
-  }
 
   public Cohort(String name){
     this.name = name;
