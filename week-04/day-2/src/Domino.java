@@ -1,5 +1,4 @@
-import java.util.Arrays;
-public class Domino implements Comparable{
+public class Domino implements Comparable,Printable {
   private final int left;
   private final int right;
 
@@ -25,6 +24,13 @@ public class Domino implements Comparable{
   public int compareTo(Object o) {
     return 0;
   }
+
+  @Override
+  public void printAllFields() {
+
+  }
+}
+
 /*
   @Override
   public int compareTo(Domino domino) {
@@ -32,4 +38,3 @@ public class Domino implements Comparable{
   }
 
  */
-}

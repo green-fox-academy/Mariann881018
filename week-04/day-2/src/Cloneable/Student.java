@@ -1,3 +1,5 @@
+package Cloneable;
+
 public class Student extends Person implements Cloneable{
   private String prevOrg;
   private int skippedDays;

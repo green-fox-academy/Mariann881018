@@ -1,3 +1,5 @@
+package Cloneable;
+
 public class Main {
   public static void main(String[] args) {
 
@@ -16,7 +18,7 @@ public class Main {
 }
 
 
-//Get your Student class from the Greenfox Organization Exercise
+//Get your Cloneable.Student class from the Greenfox Organization Exercise
 //Override and implement the clone() method, so it clones the student
 //Instantiate John, a 20 years old male from BME
 //Clone him into johnTheClone
