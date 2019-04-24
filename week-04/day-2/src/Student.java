@@ -1,4 +1,4 @@
-public class Student extends Person{
+public class Student extends Person implements Cloneable{
   private String prevOrg;
   private int skippedDays;
 
@@ -10,6 +10,10 @@ public class Student extends Person{
   public Student(){
     this.prevOrg = "The School of Life";
     this.skippedDays = 0;
+  }
+
+  public void setPrevOrg(String prevOrg) {
+    this.prevOrg = prevOrg;
   }
 
   void skipDays(int numberOfDays){
@@ -33,5 +37,10 @@ public class Student extends Person{
   @Override
   void getGoal(){
     System.out.println("My goal is: Be a junior software developer.");
+  }
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException{
+    return super.clone();
   }
 }
