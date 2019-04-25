@@ -15,5 +15,4 @@ public class Violin extends StringedInstrument {
     String itsSound = "Screech";
     return itsSound;
   }
-
 }

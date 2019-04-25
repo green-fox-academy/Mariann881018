@@ -15,8 +15,3 @@ public class Helicopter extends Vehicle implements Flyable{
   public void takeOff() {
   }
 }
-
-/*
-Extend Flyable.Helicopter class from Flyable.Vehicle
-implement your Flyable.Flyable interface
- */

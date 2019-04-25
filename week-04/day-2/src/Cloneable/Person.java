@@ -9,7 +9,6 @@ public class Person{
     this.name = "Jane Doe";
     this.age = 30;
     this.gender = "female";
-
   }
 
   public Person(String name, int age, String gender){

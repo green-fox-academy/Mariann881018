@@ -1,6 +1,5 @@
-
 public class Gnirts implements CharSequence{
-  private String s;
+  String s;
 
   public Gnirts(String s) {
     this.s = s;
@@ -11,13 +10,12 @@ public class Gnirts implements CharSequence{
   }
 
   public char charAt(int index) {
-    return 0;
+    char[] charArray = s.toCharArray();
+    return charArray[s.length() - 1 - index];
   }
 
   public CharSequence subSequence(int start, int end) {
     return null;
+    }
   }
-}
-
-
 

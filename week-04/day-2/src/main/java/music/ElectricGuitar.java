@@ -17,5 +17,4 @@ public class ElectricGuitar extends StringedInstrument {
     String itsSound = "Twang";
     return itsSound;
   }
-
 }

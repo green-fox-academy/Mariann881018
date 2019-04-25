@@ -1,24 +1,28 @@
 import java.util.stream.IntStream;
 
 public class Shifter implements CharSequence{
+  String s;
+  int shift;
 
   public Shifter() {
-
   }
 
   public Shifter(String s, int a){
-
   }
 
-
-  @Override
   public int length() {
-    return 0;
+    return s.length();
   }
 
-  @Override
   public char charAt(int index) {
-    return 0;
+    char[] charArray = s.toCharArray();
+    if (index > this.length() - 1) {
+      throw new IndexOutOfBoundsException();
+    }
+    if (index + this.shift < this.length()) {
+      return charArray[index + this.shift];
+    }
+    return charArray[index + this.shift - this.length()];
   }
 
   @Override

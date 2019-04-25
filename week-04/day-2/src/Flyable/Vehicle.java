@@ -36,8 +36,3 @@ public abstract class Vehicle {
     this.brand = brand;
   }
 }
-
-/*
-Create an abstract Flyable.Vehicle class it should have at least 3 fields
-
- */

@@ -13,12 +13,4 @@ public class Main {
       System.out.println("nem jó");
     }
   }
-
-
 }
-
-
-//Get your Cloneable.Student class from the Greenfox Organization Exercise
-//Override and implement the clone() method, so it clones the student
-//Instantiate John, a 20 years old male from BME
-//Clone him into johnTheClone
