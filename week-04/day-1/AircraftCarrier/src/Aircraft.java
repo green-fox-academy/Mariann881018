@@ -38,7 +38,7 @@ public class Aircraft {
   }
 
   public int fight(){
-    int allDamage = getBaseDamage()*getCurrentAmmo();
+    allDamage = this.getBaseDamage() * this.getCurrentAmmo();
     setCurrentAmmo(0);
     return allDamage;
   }
@@ -61,11 +61,14 @@ public class Aircraft {
   }
 
   public void getStatus(){
-    System.out.println("Type: " + getType() + ", Ammo: " + getCurrentAmmo() + ", Base Damage: " + getBaseDamage()
-            + ", All Damage: " + this.fight());
+    System.out.println("Type: " + getType() + ", Ammo: " + this.getCurrentAmmo() + ", Base Damage: " + getBaseDamage()
+            + ", All Damage: " + fight());
   }
 
   public boolean isPriority(){
-    return priority;
+    if (getType()== "F35"){
+      return true;
+    } else
+    return false;
   }
 }

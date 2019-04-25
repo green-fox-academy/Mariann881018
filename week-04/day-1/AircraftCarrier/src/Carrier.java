@@ -46,8 +46,8 @@ public class Carrier extends Aircraft{
 
   public int totalDamage(){   // aircraft.fight returns the allDamage of individual crafts
     int allCraftDamage = 0;
-    for (int i = 0; i < aircrafts.size(); i++){
-      allCraftDamage = aircrafts.get(i).fight();
+    for (Aircraft aircraft : aircrafts) {
+      allCraftDamage += aircraft.getAllDamage();
     }
     return allCraftDamage;
   }

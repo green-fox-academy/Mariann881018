@@ -16,7 +16,9 @@ public class Sharpie {
   }
 
   public boolean isUsable(){
-    if (inkAmount <= 0);
+    if (this.inkAmount >= 0){
+      return true;
+    }
     return false;
   }
 }
