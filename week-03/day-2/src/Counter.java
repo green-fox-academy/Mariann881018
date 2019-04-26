@@ -25,6 +25,7 @@ public class Counter {
     number = initialNum;
   }
 }
+
   /*
   Create Counter class
 which has an integer field value

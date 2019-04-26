@@ -30,7 +30,6 @@ public class Doubled {
   }
 
 }
-//String.valueOf(data.charAt(i));
 
 /*
 for (int i = 0; i < data.size() ; i++) {

@@ -19,11 +19,6 @@ public class ListIntroduction1 {
     }
       System.out.println();
 
-    //Iterate through the list and print
-    //1. William
-    //2. John
-    //3. Amanda
-
     for (int i = 0; i < myList.size(); i++) {
       System.out.println(i + 1 + ". " + myList.get(i));
     }

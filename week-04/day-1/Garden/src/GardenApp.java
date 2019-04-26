@@ -1,8 +1,8 @@
 public class GardenApp {
   public static void main(String[] args) {
 
-    Flower flowerOne = new Flower("yellow",0);
-    Flower flowerTwo = new Flower("blue",0);
+    Flower flowerOne = new Flower("yellow",1);
+    Flower flowerTwo = new Flower("blue",2);
     Tree treeOne = new Tree("purple",0);
     Tree treeTwo = new Tree("orange",0);
 
