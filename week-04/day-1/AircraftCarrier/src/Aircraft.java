@@ -1,9 +1,8 @@
 public class Aircraft {
   private int currentAmmo;
   private int baseDamage;
-  private int allDamage;
   private int maxAmmo;
-  boolean priority;
+  private boolean priority = false;
 
   public Aircraft(){
     this.setCurrentAmmo(0); // All aircrafts should be created with an empty ammo storage
@@ -25,9 +24,6 @@ public class Aircraft {
     this.baseDamage = baseDamage;
   }
 
-  public int getAllDamage() {
-    return allDamage;
-  }
 
   public int getMaxAmmo() {
     return maxAmmo;
@@ -37,8 +33,16 @@ public class Aircraft {
     this.maxAmmo = maxAmmo;
   }
 
+  public boolean isPriority() {
+    return priority;
+  }
+
+  public void setPriority(boolean priority) {
+    this.priority = priority;
+  }
+
   public int fight(){
-    allDamage = this.getBaseDamage() * this.getCurrentAmmo();
+    int allDamage = this.getBaseDamage() * this.getCurrentAmmo();
     setCurrentAmmo(0);
     return allDamage;
   }
@@ -62,13 +66,6 @@ public class Aircraft {
 
   public void getStatus(){
     System.out.println("Type: " + getType() + ", Ammo: " + this.getCurrentAmmo() + ", Base Damage: " + getBaseDamage()
-            + ", All Damage: " + fight());
-  }
-
-  public boolean isPriority(){
-    if (getType()== "F35"){
-      return true;
-    } else
-    return false;
+            + ", All Damage: " + getMaxAmmo()* getBaseDamage());
   }
 }

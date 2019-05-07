@@ -11,14 +11,10 @@ public class Main {
     int[] nums = {15};
     List<Integer> testList = new ArrayList<>();
     myObject.summingElements(testList);
-  //  System.out.println(testList);
 
-    /////////////////////////////////////////////////
 
     Sharpie one = new Sharpie();
     one.inkAmount = 1;
     System.out.println(one.isUsable());
-
-
   }
 }

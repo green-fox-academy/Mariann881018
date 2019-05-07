@@ -2,15 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrier extends Aircraft{
-  private List<Aircraft> aircrafts;
-  int storeOfAmmo;
-  int healthPoints;
+  private List<Aircraft> aircrafts = new ArrayList<>();
+  private int storeOfAmmo;
+  private int healthPoints;
 
   public Carrier(){
   }
 
   public Carrier(int storeOfAmmo, int healthPoints) {
-    this.aircrafts = new ArrayList<>();
     this.storeOfAmmo = storeOfAmmo;
     this.healthPoints = healthPoints;
   }
@@ -27,11 +26,17 @@ public class Carrier extends Aircraft{
     } catch (Exception ex){
       System.out.println("Carrier's store of ammo is empty");
     }
-
     int allNeeded = 0;
     for (Aircraft aircraft : aircrafts) {
       if (aircraft.getCurrentAmmo() < aircraft.getMaxAmmo()){
-        allNeeded += aircraft.getMaxAmmo();
+        allNeeded += (aircraft.getMaxAmmo()-aircraft.getCurrentAmmo());
+      }
+    }
+    if (storeOfAmmo < allNeeded){
+      for (Aircraft aircraft : aircrafts){
+        if (aircraft.isPriority()){
+          aircraft.setCurrentAmmo(aircraft.getMaxAmmo());
+        }
       }
     }
     storeOfAmmo -= allNeeded;
@@ -44,10 +49,10 @@ public class Carrier extends Aircraft{
     }
   }
 
-  public int totalDamage(){   // aircraft.fight returns the allDamage of individual crafts
+  public int totalDamage() {
     int allCraftDamage = 0;
     for (Aircraft aircraft : aircrafts) {
-      allCraftDamage += aircraft.getAllDamage();
+      allCraftDamage += (aircraft.getMaxAmmo()* aircraft.getBaseDamage());
     }
     return allCraftDamage;
   }
@@ -56,8 +61,8 @@ public class Carrier extends Aircraft{
     if (healthPoints == 0){
       System.out.println("It's dead Jim");
     } else {
-      System.out.println("HP: " + this.healthPoints + ", Aircraft count: " + aircrafts.size() + ", Ammo Storage: "
-              + this.storeOfAmmo + ", Total damage: " + totalDamage() + "\n"
+      System.out.println("HP: " + healthPoints + ", Aircraft count: " + aircrafts.size() + ", Ammo Storage: "
+              + storeOfAmmo + ", Total damage: " + totalDamage() + "\n"
       + "Aircrafts:");
       for (Aircraft aircraft : aircrafts){
         aircraft.getStatus();

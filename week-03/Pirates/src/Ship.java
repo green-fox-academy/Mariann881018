@@ -55,17 +55,7 @@ public class Ship {
     } else {
       othership.winner = true;
     }
-
     if  (!winner){
-
     }
   }
 }
-/*
-Ships should have a method to battle other ships: ship.battle(otherShip) -
-should return true if the actual ship (this) wins
-the ship should win if its calculated score is higher
-- calculate score: Number of Alive pirates in the crew - Number of consumed rum by the captain
-The loser crew has a random number of losses (deaths). - The winner captain and crew has a party, including a random number of rum :)
-
- */

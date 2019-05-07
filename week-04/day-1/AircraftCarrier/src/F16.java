@@ -5,7 +5,5 @@ public class F16 extends Aircraft{
     super();
     this.setMaxAmmo(8);
     this.setBaseDamage(30);
-    this.priority = false;
-
   }
 }

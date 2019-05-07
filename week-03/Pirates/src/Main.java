@@ -17,7 +17,5 @@ public class Main {
     pearl.crew.add(smith);
     pearl.fillShip();
     pearl.getInfo();
-
-
   }
 }
