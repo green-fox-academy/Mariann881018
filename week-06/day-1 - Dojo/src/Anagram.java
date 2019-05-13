@@ -13,7 +13,7 @@ public class Anagram {
       if (temp[i] != temp2[i]){
         return false;
       }
-  }
+    }
     return true;
   }
 }
