@@ -11,7 +11,7 @@ public class Exercise8 {
     String result = characterList.stream()
             .map(n -> n.toString())
             .collect(Collectors.joining());
-    
+
     System.out.println(result);
   }
 }
