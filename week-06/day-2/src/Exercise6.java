@@ -4,7 +4,8 @@ public class Exercise6 {
 
     String testString = "MyNameIsMariann";
 
-    testString.chars().filter(c -> Character.isUpperCase(c))
+    testString.chars()
+            .filter(c -> Character.isUpperCase(c))
             .forEach(c -> System.out.print((char)c));
 
   }
