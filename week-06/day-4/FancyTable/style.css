@@ -1,0 +1,39 @@
+body{
+    background-color: #4595EC;
+}
+
+th, tr, td{
+    border: 1px solid #D5D5D7;
+    border-collapse: collapse;
+    font-size: 30px;
+    text-indent: 10%;
+}
+
+table{
+    width: 900px;
+    font-family: "Helvetica";
+    background-color: white;
+    margin-left: 35px;
+    padding: 100px;
+    border-collapse: collapse;
+}
+th{
+    background-color: #1B1E27;
+    color: #83868F;
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+}
+
+td{
+    color: #82828C;
+}
+
+tr:nth-child(even){
+    background-color: #EBEBEB;
+}
+
+tr{
+    height: 100px;;
+}

@@ -11,6 +11,5 @@ public class Exercise4 {
             .mapToInt(n -> n)
             .average()
             .ifPresent(avg -> System.out.println(avg));
-
   }
 }

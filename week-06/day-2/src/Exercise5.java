@@ -11,8 +11,6 @@ public class Exercise5 {
             .filter(n -> n % 2 != 0)
             .mapToInt(Integer::intValue)
             .sum();
-
     System.out.println(sum);
-
   }
 }

@@ -11,8 +11,6 @@ public class Exercise7 {
     List<String> result = cities.stream()
             .filter(c -> c.startsWith("A"))
             .collect(Collectors.toList());
-
     System.out.println(result);
-
   }
 }

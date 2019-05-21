@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+body{
+    color: #5D6063;
+    background-color: #EAEDF0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-variant: small-caps;
+    font-size: 24px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myform{
+    padding: 50px;
+    margin: 10px;
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.form-row {
+    font-size: 16px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    margin-bottom: 10px;
+}
+
+.form-row input[type='text'],
+.form-row input[type='password']{
+    height: 3em;
+    font-size: 16px;
+}
+
+#last{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.forgot{
+    text-align: right;
+    font-size: 16px;
+    font-variant: normal;
+}
+
+.forgot a{
+    color: #5D6063;
+    text-decoration-line: none;
+}
+
+.forgot a:hover{
+    color: #5D6063;
+    text-decoration-line: underline;
+}
+
+input:focus { 
+    border-color:limegreen;
+}
+
+.form-row button {
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+    color: #FFFFFF;
+    background-color: darkslategrey;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: #76AEED;
+}
+
+.form-row button:active {
+    background-color: #407FC7;
+} 
+

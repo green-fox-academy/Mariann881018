@@ -16,7 +16,6 @@ public class Streams {
 
     Map<Boolean,List<Integer>> smallers = numbers.stream()
             .collect(Collectors.groupingBy(n -> n < 2));
-
     //words.forEach(w -> System.out.println(w));
 
     Optional<Integer> optionalValue = numbers.stream()

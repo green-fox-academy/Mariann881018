@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Mariann's webshop</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+    <h1>My Shop</h1>
+</header>
+<div>
+    <a href="http://localhost:8080/webshop/only-available"><button class="buttonWithLink">Only Available</button></a>
+    <a href="http://localhost:8080/webshop/cheapest-first"><button class="buttonWithLink">Cheapest First</button></a>
+    <a href="http://localhost:8080/webshop/contains-nike"><button class="buttonWithLink">Contains Nike</button></a>
+    <a href="http://localhost:8080/webshop/average-stock"><button class="buttonWithLink">Average Stock</button></a>
+    <a href="#"><button class="buttonWithLink">Most Expensive Available</button></a>
+</div>
+
+    <div class="stock">
+        <p id="average-stock" th:text="'The average stock is: ' + ${average}"></p>
+    </div>
+</body>
+</html>

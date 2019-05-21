@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .king{
+        color: red;
+        }
+    </style>
+    <title>Bank of Simba</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Index</th>
+    <th>Name</th>
+    <th>Balance</th>
+    <th>Animal type</th>
+    <th>Is it a King?</th>
+    <th>Bad guy?</th>
+    </thead>
+    <tbody>
+
+    <tr th:each="animal : ${animals}" th:classappend="${animal.isKing()} ? king : notKing" th:switch="${animal.isGood}">
+        <td th:text="${animalStat.index + 1}"></td>
+        <td th:text="${animal.getName()}"></td>
+        <td th:text="${#numbers.formatDecimal(animal.getBalance(), 1, 2, 'POINT')}"></td>
+        <td th:text="${animal.getAnimalType()}"></td>
+        <td th:if="${animal.isKing()}" class="king"><b>King</b></td>
+        <td th:case="'true'">Bad guy</td>
+        <td th:case="'false'">Good boy</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

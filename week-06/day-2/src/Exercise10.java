@@ -28,14 +28,11 @@ public class Exercise10 {
             .forEach(n -> System.out.println(n.name + " - " + n.age));
     System.out.println();
 
-
     System.out.println("Stream Expression to find the foxes with green color, and age less then 5 years:");
     foxList.stream()
             .filter(e -> e.color.equals("green") && e.age < 5)
-           // .filter(e -> e.age < 5)
             .forEach(n -> System.out.println(n.name));
     System.out.println();
-
 
     System.out.println("Stream Expression to find the frequency of foxes by color:");
     Map<String,Integer> frequencyByColor = foxList.stream()

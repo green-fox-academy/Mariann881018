@@ -3,10 +3,8 @@ public class Exercise6 {
     //Write a Stream Expression to find the uppercase characters in a string!
 
     String testString = "MyNameIsMariann";
-
     testString.chars()
             .filter(c -> Character.isUpperCase(c))
             .forEach(c -> System.out.print((char)c));
-
   }
 }
