@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -43,21 +44,26 @@ public class HomeController implements CommandLineRunner {
   }
 
   @RequestMapping("/useful")
-  public String useful(Model model){
-    model.addAttribute("utilityService", utilityService);
+  public String useful(){
     return "useful";
   }
 
-  @GetMapping("/useful/colored")
-  @ResponseBody
-  public String usefulColored(){
-    return "Hello";
+  @RequestMapping("/useful/colored")
+  public String usefulColored(Model model){
+    model.addAttribute("utilityService", utilityService);
+    return "empty";
   }
 
-  @GetMapping("/useful/email")
-  @ResponseBody
-  public String email(){
-    return "Hello";
+  @RequestMapping("/useful/encode")     //http://localhost:8080/useful/encode?word=example&number=1
+  public String encode(Model model, @RequestParam String word, int number){
+    model.addAttribute("result",utilityService.caesar(word, number));
+    return "encodeDecode";
+  }
+
+  @RequestMapping("/useful/decode")    //http://localhost:8080/useful/decode?word=fybnqmf&number=1
+  public String decode(Model model, @RequestParam String word, @RequestParam int number){
+    model.addAttribute("result",utilityService.caesar(word, -number));
+    return "encodeDecode";
   }
 
   @Override
