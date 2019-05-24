@@ -1,9 +1,12 @@
 package com.example.demo.models;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Food {
   private String foodName;
 
-  public Food() {
+  public Food(){
   }
 
   public Food(String foodName) {
@@ -16,5 +19,10 @@ public class Food {
 
   public void setFoodName(String foodName) {
     this.foodName = foodName;
+  }
+
+  @Override
+  public String toString() {
+    return foodName;
   }
 }

@@ -8,12 +8,13 @@
 <div>
     <header>
         <ul>
-            <li><a href="index">Information</a></li>
-            <li><a href="nutritionStore">Nutrition Store</a></li>
-            <li><a href="trickCenter">Trick Center</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="'/index?name=' + ${fox.getName()}">Information</a></li>
+            <li><a th:href="'/nutritionStore?name=' + ${fox.getName()}">Nutrition Store</a></li>
+            <li><a th:href="'/trickCenter?name=' + ${fox.getName()}">Trick Center</a></li>
         </ul>
     </header>
-    <form th:action="@{/saveTrick}" th:method="post" modelAttribute="foxTrick">
+    <form th:action="'/trickCenter?name=' + ${fox.getName()}" method="post">
         <div>
             <label>Trick</label>
             <select name="trick">

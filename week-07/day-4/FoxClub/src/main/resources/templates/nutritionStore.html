@@ -8,28 +8,26 @@
 <div>
     <header>
         <ul>
-            <li><a href="index">Information</a></li>
-            <li><a href="nutritionStore">Nutrition Store</a></li>
-            <li><a href="trickCenter">Trick Center</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="'/index?name=' + ${fox.getName()}">Information</a></li>
+            <li><a th:href="'/nutritionStore?name=' + ${fox.getName()}">Nutrition Store</a></li>
+            <li><a th:href="'/trickCenter?name=' + ${fox.getName()}">Trick Center</a></li>
         </ul>
     </header>
-    <form th:action="@{nutritionStore}" th:method="post" modelAttribute="foxFood">
-            <label>Food</label>
-            <select name="newFood">
-                <option value="Pizza">Pizza</option>
-                <option value="Burger">Burger</option>
-                <option value="Gyros">Gyros</option>
-                <option value="Pasta">Pasta</option>
-                <option value="Salad">Salad</option>
-            </select>
-            <label>Drink</label>
-            <select name="newDrink">
-                <option value="Lemonade">Lemonade</option>
-                <option value="Coke">Coke</option>
-                <option value="Beer">Beer</option>
-                <option value="Water">Water</option>
-                <option value="Coffee">Coffee</option>
-            </select>
+    <form th:action="@{/nutritionStore(name=${name})}" method="post">
+        <label>Food</label>
+        <select name="food" th:type="text" modelattribute="food">
+            <option th:each="food : ${food}"
+                    th:value="${food}"
+                    th:text="${food}"></option>
+<!--                    th:selected="${food == currentfood}"/>-->
+        </select>
+        <label>Drink</label>
+        <select name="drink" th:type="text" modelattribute="drink">
+            <option th:each="drink : ${drink}"
+                    th:value="${drink}"
+                    th:text="${drink}"></option>
+        </select>
             <button type="submit">Change</button>
         </form>
     </form>

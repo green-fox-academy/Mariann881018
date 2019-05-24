@@ -1,21 +1,26 @@
 package com.example.demo.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Fox {
   private String name;
-  private Food food;
+  private List<String> trickList;
+
+  @Autowired
   private Drink drink;
-  private List<Trick> trickList = new ArrayList<>();
+  private Food food;
+
+  public Fox(){
+  }
 
   public Fox(String name) {
     this.name = name;
-    food = new Food("Burger");
     drink = new Drink("Coca Cola");
-    trickList.add(new Trick("SQL"));
-    trickList.add(new Trick("C#"));
-    trickList.add(new Trick("JavaScript"));
+    food = new Food("Burger");
+    trickList = new ArrayList<>();
   }
 
   public boolean hasAnyTricks(){
@@ -46,7 +51,7 @@ public class Fox {
     this.drink = drink;
   }
 
-  public List<Trick> getTrickList() {
+  public List<String> getTrickList() {
     return trickList;
   }
 }

@@ -30,15 +30,14 @@ public class MainController {
   }
 
   @GetMapping("/login")
-  public String getLoginPage(@RequestParam(required = false) String name) {
+  public String getLoginPage() {
     return "login";
   }
 
   @PostMapping("/login")
-  public String login(String name) {
+  public String loginReceived(String name) {
     Fox fox = new Fox(name);
     foxService.addFox(fox);
     return "redirect:/index?name=" + name;
   }
-
 }
