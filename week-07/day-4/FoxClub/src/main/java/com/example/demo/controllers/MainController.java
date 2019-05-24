@@ -1,16 +1,18 @@
 package com.example.demo.controllers;
 
 import com.example.demo.models.Fox;
+import com.example.demo.services.FoxListService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
 public class MainController {
-  private List<Fox> foxList;
-  private Fox fox;
+
+  @Autowired
+  private FoxListService foxListService;
 
   @GetMapping("/")
   public String home(Model model, @RequestParam(defaultValue = "Mr. Fox") String name) {
@@ -23,25 +25,20 @@ public class MainController {
     if(name == null) {
       return "login";
     } else {
-      model.addAttribute("fox", new Fox(name));
-      return "redirect:/index?name=" + name;
+      model.addAttribute("fox", foxListService.findByName(name));
+      return "index";
     }
   }
 
-  @PostMapping("/index")
-  public String index2(Model model, @ModelAttribute Fox fox) {
-    model.addAttribute("fox", fox);
-    return "index";
+  @PostMapping("/login")
+  public String login(String name) {
+    Fox fox = new Fox(name);
+    foxListService.addFox(fox);
+    return "redirect:/index?name=" + name;
   }
 
   @GetMapping("/login")
   public String getLoginPage(@RequestParam(required = false) String name) {
     return "login";
-  }
-
-  @PostMapping("/login")
-  public String saveFox(Model model, @ModelAttribute Fox fox, String name) {
-    model.addAttribute("name",fox.getName());
-    return "redirect:/index?name=" + name;
   }
 }

@@ -10,7 +10,7 @@
         <h1>Welcome to Programmer Fox Club!</h1>
     </header>
     <p>Please provide a name, so you an associate it to your pet!</p>
-    <form action="index" th:action="@{/index}" th:object="${fox}" th:method="post">
+    <form action="index" th:action="@{/index}" th:object="${fox}" th:method="get">
         <div>
             <label for='name'>Name of your fox:</label>
             <input id='name' name='name' type='text' required/>

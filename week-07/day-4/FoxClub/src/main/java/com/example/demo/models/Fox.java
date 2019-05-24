@@ -11,7 +11,7 @@ public class Fox {
 
   public Fox(String name) {
     this.name = name;
-    food = new Food("burger");
+    food = new Food("Burger");
     drink = new Drink("Coca Cola");
     trickList.add(new Trick("SQL"));
     trickList.add(new Trick("C#"));
@@ -48,9 +48,5 @@ public class Fox {
 
   public List<Trick> getTrickList() {
     return trickList;
-  }
-
-  public void setTrickList(List<Trick> trickList) {
-    this.trickList = trickList;
   }
 }

@@ -3,6 +3,9 @@ package com.example.demo.models;
 public class Food {
   private String foodName;
 
+  public Food() {
+  }
+
   public Food(String foodName) {
     this.foodName = foodName;
   }

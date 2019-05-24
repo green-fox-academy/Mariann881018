@@ -13,9 +13,9 @@
             <li><a href="trickCenter">Trick Center</a></li>
         </ul>
     </header>
-    <form th:action="@{nutritionStore}" th:method="post">
+    <form th:action="@{nutritionStore}" th:method="post" modelAttribute="foxFood">>
             <label>Food</label>
-            <select name="food">
+            <select name="newFood">
                 <option value="Pizza">Pizza</option>
                 <option value="Burger">Burger</option>
                 <option value="Gyros">Gyros</option>
@@ -23,7 +23,7 @@
                 <option value="Salad">Salad</option>
             </select>
             <label>Drink</label>
-            <select name="drink">
+            <select name="newDrink">
                 <option value="Lemonade">Lemonade</option>
                 <option value="Coke">Coke</option>
                 <option value="Beer">Beer</option>
