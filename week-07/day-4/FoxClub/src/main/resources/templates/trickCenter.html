@@ -13,7 +13,7 @@
             <li><a href="trickCenter">Trick Center</a></li>
         </ul>
     </header>
-    <form th:action="@{/saveTrick}" th:method="post">
+    <form th:action="@{/saveTrick}" th:method="post" modelAttribute="foxTrick">
         <div>
             <label>Trick</label>
             <select name="trick">

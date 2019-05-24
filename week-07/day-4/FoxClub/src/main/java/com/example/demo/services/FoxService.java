@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class FoxListService {
+public class FoxService {
   private List<Fox> foxList;
 
-  public FoxListService() {
+  public FoxService() {
     foxList = new ArrayList<>();
   }
 
@@ -25,5 +25,6 @@ public class FoxListService {
     }
     return null;
   }
+
 
 }

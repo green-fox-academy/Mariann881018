@@ -19,7 +19,7 @@ public class Fox {
   }
 
   public boolean hasAnyTricks(){
-    return trickList.size()!=0;
+    return trickList.size() != 0;
   }
 
   public String getName() {
