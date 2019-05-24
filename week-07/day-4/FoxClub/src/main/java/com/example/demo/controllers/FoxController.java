@@ -1,30 +1,36 @@
 package com.example.demo.controllers;
 
+import com.example.demo.models.Fox;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class FoxController {
+  private List<Fox> foxList;
+  private Fox fox;
 
   @GetMapping("/nutritionStore")
-  public String nutrition(){
+  public String getNutriStore(){
     return "nutritionStore";
   }
 
   @PostMapping("/nutritionStore")
-  public String login(String name) {
+  public String saveFood(Model model, @RequestParam String food, @RequestParam String drink) {
+/*    model.addAttribute("food", fox.getFood().getFoodName());*/
+/*    model.addAttribute("drink", fox.getDrink().setName(drink));*/
+    return "redirect:/index";
+  }
+
+  @GetMapping("/trickCenter")
+  public String getTrickCenter(){
+    return "trickCenter";
+  }
+
+  @PostMapping("/trickCenter")
+  public String changeTrick(String name) {
     return "redirect:/index?name=" + name;
   }
 }
-
-
-//create a /nutritionStore route
-//create the nutrition store view's template
-//do not forget to add this to the menu on the other views
-//here you should be able to change the fox's food and drink
-//feel free to add your own foods and drinks
-//you might need additional routes to achieve this
-//create an other controller for those (eg. FoxController.class)
-//when the button is pressed it should redirect to the information page
-//optional: the current food and drink are selected by default

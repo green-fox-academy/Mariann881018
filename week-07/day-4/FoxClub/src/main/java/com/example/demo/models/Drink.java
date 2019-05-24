@@ -1,17 +1,17 @@
 package com.example.demo.models;
 
 public class Drink {
-  private String name;
+  private String drinkName;
 
-  public Drink(String name) {
-    this.name = name;
+  public Drink(String drinkName) {
+    this.drinkName = drinkName;
   }
 
-  public String getName() {
-    return name;
+  public String getDrinkName() {
+    return drinkName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setDrinkName(String drinkName) {
+    this.drinkName = drinkName;
   }
 }

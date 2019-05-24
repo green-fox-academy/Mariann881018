@@ -1,17 +1,17 @@
 package com.example.demo.models;
 
 public class Trick {
-  private String name;
+  private String trickName;
 
-  public Trick(String name) {
-    this.name = name;
+  public Trick(String trickName) {
+    this.trickName = trickName;
   }
 
-  public String getName() {
-    return name;
+  public String getTrickName() {
+    return trickName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setTrickName(String trickName) {
+    this.trickName = trickName;
   }
 }

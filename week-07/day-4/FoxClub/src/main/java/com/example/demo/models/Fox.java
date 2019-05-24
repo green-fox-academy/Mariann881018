@@ -7,13 +7,12 @@ public class Fox {
   private String name;
   private Food food;
   private Drink drink;
-  private List<Trick> trickList;
+  private List<Trick> trickList = new ArrayList<>();
 
   public Fox(String name) {
     this.name = name;
-    food = new Food("Burger");
-    drink = new Drink("Coca Cola Zero");
-    trickList = new ArrayList<>();
+    food = new Food("burger");
+    drink = new Drink("Coca Cola");
     trickList.add(new Trick("SQL"));
     trickList.add(new Trick("C#"));
     trickList.add(new Trick("JavaScript"));

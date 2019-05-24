@@ -7,26 +7,22 @@
   <body>
     <header>
       <ul>
-        <li><a href="index">Information</a></li>
-        <li><a href="nutritionStore">Nutrition Store</a></li>
-        <li><a href="index">Trick Center</a></li>
+        <li><a th:href="@{/index}">Information</a></li>
+        <li><a th:href="@{/nutritionStore}">Nutrition Store</a></li>
+        <li><a th:href="@{/trickCenter}">Trick Center</a></li>
       </ul>
     </header>
     <div class="image">
       <img src="greenfox.png">
     </div>
-    <p th:text="|This is ${fox.getName()}. Currently living on ${fox.getFood().getName()} and ${fox.getDrink().getName()}. He knows ${fox.getTrickList().size()} tricks.|"></p>
+    <p th:text="|This is ${fox.getName()}. Currently living on ${fox.getFood().getFoodName()} and ${fox.getDrink().getDrinkName() }. He knows ${fox.getTrickList().size()} tricks.|"></p>
     <h1>Known Tricks:</h1>
-
+    <ul th:if="${fox.getTrickList().isEmpty()} == true">
+      <li>You know no tricks, yet!</li>
+    </ul>
     <ul th:each="trick : ${fox.getTrickList()}">
-      <li th:text="${trick.getName()}"></li>
+      <li th:text="${trick.getTrickName()}"></li>
     </ul>
   </body>
 </html>
-
-<ul {% if ${fox.getTrickList().isEmpty()} == true %}>
-  <li>You know no tricks, yet!</li>
-</ul>
-
-
 

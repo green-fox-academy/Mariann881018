@@ -10,13 +10,16 @@
         <h1>Welcome to Programmer Fox Club!</h1>
     </header>
     <p>Please provide a name, so you an associate it to your pet!</p>
-    <form action='index' method='get'>
+    <form action="index" th:action="@{/index}" th:object="${fox}" th:method="post">
         <div>
             <label for='name'>Name of your fox:</label>
             <input id='name' name='name' type='text' required/>
-            <button>GO</button>
+            <button type="submit">GO</button>
         </div>
     </form>
 </div>
 </body>
 </html>
+
+<!--th:action="@{/saveFox}"-->
+<!--th:field="@{name}"-->

@@ -1,17 +1,17 @@
 package com.example.demo.models;
 
 public class Food {
-  private String name;
+  private String foodName;
 
-  public Food(String name) {
-    this.name = name;
+  public Food(String foodName) {
+    this.foodName = foodName;
   }
 
-  public String getName() {
-    return name;
+  public String getFoodName() {
+    return foodName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFoodName(String foodName) {
+    this.foodName = foodName;
   }
 }

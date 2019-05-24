@@ -10,13 +10,12 @@
         <ul>
             <li><a href="index">Information</a></li>
             <li><a href="nutritionStore">Nutrition Store</a></li>
-            <li><a href="index">Trick Center</a></li>
+            <li><a href="trickCenter">Trick Center</a></li>
         </ul>
     </header>
-    <form action='index' method='get'>
-        <div>
+    <form th:action="@{nutritionStore}" th:method="post">
             <label>Food</label>
-            <select>
+            <select name="food">
                 <option value="Pizza">Pizza</option>
                 <option value="Burger">Burger</option>
                 <option value="Gyros">Gyros</option>
@@ -24,15 +23,15 @@
                 <option value="Salad">Salad</option>
             </select>
             <label>Drink</label>
-            <select>
+            <select name="drink">
                 <option value="Lemonade">Lemonade</option>
                 <option value="Coke">Coke</option>
                 <option value="Beer">Beer</option>
                 <option value="Water">Water</option>
                 <option value="Coffee">Coffee</option>
             </select>
-            <button>Change</button>
-        </div>
+            <button type="submit">Change</button>
+        </form>
     </form>
 </div>
 </body>
