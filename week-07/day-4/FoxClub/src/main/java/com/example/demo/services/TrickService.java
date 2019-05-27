@@ -22,12 +22,4 @@ public class TrickService {
         return trickList;
     }
 
-    public int numberOfTricks(){
-        return trickList.size();
-    }
-
-    public void addTrick(String trick) {
-        this.trickList.add(trick);
-    }
-
 }

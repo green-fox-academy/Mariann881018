@@ -1,7 +1,5 @@
 package com.example.demo.controllers;
 
-import com.example.demo.models.Fox;
-import com.example.demo.models.Trick;
 import com.example.demo.services.DrinkService;
 import com.example.demo.services.FoodService;
 import com.example.demo.services.FoxService;

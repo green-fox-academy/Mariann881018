@@ -24,9 +24,7 @@ public class Fox {
     drink = new Drink("Coca Cola");
     food = new Food("Burger");
   }
-  public boolean hasAnyTricks(){
-    return listOfTricks.size() != 0;
-  }
+
 
   public int numberOfTricks(){
     if (listOfTricks != null){
