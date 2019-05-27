@@ -20,8 +20,4 @@ public class DrinkService {
   public List<String> getListOfDrinks() {
     return listOfDrinks;
   }
-
-  public void setListOfDrinks(List<String> listOfDrinks) {
-    this.listOfDrinks = listOfDrinks;
-  }
 }

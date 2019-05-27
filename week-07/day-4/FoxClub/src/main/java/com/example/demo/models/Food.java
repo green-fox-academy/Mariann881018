@@ -21,8 +21,4 @@ public class Food {
     this.foodName = foodName;
   }
 
-  @Override
-  public String toString() {
-    return foodName;
-  }
 }

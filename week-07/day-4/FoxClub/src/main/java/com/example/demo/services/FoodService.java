@@ -20,7 +20,4 @@ public class FoodService {
     return listOfFoods;
   }
 
-  public void setListOfFoods(List<String> listOfFoods) {
-    this.listOfFoods = listOfFoods;
-  }
 }

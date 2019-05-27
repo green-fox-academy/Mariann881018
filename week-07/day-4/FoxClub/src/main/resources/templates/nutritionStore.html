@@ -14,16 +14,15 @@
             <li><a th:href="'/trickCenter?name=' + ${fox.getName()}">Trick Center</a></li>
         </ul>
     </header>
-    <form th:action="@{/nutritionStore(name=${name})}" method="post">
+    <form method="post">
         <label>Food</label>
-        <select name="food" th:type="text" modelattribute="food">
+        <select name="food" th:type="text">
             <option th:each="food : ${food}"
                     th:value="${food}"
                     th:text="${food}"></option>
-<!--                    th:selected="${food == currentfood}"/>-->
         </select>
         <label>Drink</label>
-        <select name="drink" th:type="text" modelattribute="drink">
+        <select name="drink" th:type="text">
             <option th:each="drink : ${drink}"
                     th:value="${drink}"
                     th:text="${drink}"></option>
@@ -34,4 +33,3 @@
 </div>
 </body>
 </html>
-

@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import com.example.demo.services.TrickService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -7,11 +8,13 @@ import java.util.List;
 
 public class Fox {
   private String name;
-  private List<String> trickList;
+  private ArrayList<String> listOfTricks = new ArrayList<>();
 
   @Autowired
   private Drink drink;
   private Food food;
+  private Trick trick;
+  private TrickService trickService;
 
   public Fox(){
   }
@@ -20,11 +23,16 @@ public class Fox {
     this.name = name;
     drink = new Drink("Coca Cola");
     food = new Food("Burger");
-    trickList = new ArrayList<>();
+  }
+  public boolean hasAnyTricks(){
+    return listOfTricks.size() != 0;
   }
 
-  public boolean hasAnyTricks(){
-    return trickList.size() != 0;
+  public int numberOfTricks(){
+    if (listOfTricks != null){
+      return listOfTricks.size();
+    } else
+    return 0;
   }
 
   public String getName() {
@@ -51,7 +59,23 @@ public class Fox {
     this.drink = drink;
   }
 
+  public Trick getTrick() {
+    return trick;
+  }
+
+  public void setTrick(Trick trick) {
+    this.trick = trick;
+  }
+
   public List<String> getTrickList() {
-    return trickList;
+    return listOfTricks;
+  }
+
+  public void setTrickList(List<String> trickList) {
+    this.listOfTricks = listOfTricks;
+  }
+
+  public void addTrick(String trick) {
+    this.listOfTricks.add(trick);
   }
 }
