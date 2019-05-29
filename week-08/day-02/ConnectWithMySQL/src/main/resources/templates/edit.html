@@ -6,11 +6,12 @@
 </head>
 <body>
 <h1>Update the task</h1>
-<form th:action="@{/editTask}" th:method="post" th:object="${todo}">
+<form method="post" th:object="${todo}">
+<!--<form th:action="@{/editTask}" th:method="post" th:object="${todo}">-->
     <label><strong>Task</strong></label>
     <input type="text" th:field="*{title}"><br>
-    <input type="checkbox" name="urgent" value="urgent">Urgent<br>
-    <input type="checkbox" name="done" value="done">Done<br>
+    <input th:checked="${todo.isUrgent()}" type="checkbox" name="urgent" value="urgent">Urgent<br>
+    <input th:checked="${todo.isDone()}" type="checkbox" name="done" value="done" >Done<br>
     <button type="submit">Update this task</button>
     <a href="/todo/">Cancel</a>
 </form>

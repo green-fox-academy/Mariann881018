@@ -26,7 +26,7 @@ public class ToDoService implements IToDoService {
     List<Todo> sortedById = todoList.stream().sorted(Comparator.comparingLong(Todo::getId)).collect(Collectors.toList());
     return sortedById;
   }
-  
+
   public List<Todo> findActiveElements() {
     List<Todo> activeList = findAll().stream().filter(todo -> !todo.isDone()).collect(Collectors.toList());
     return activeList;
@@ -47,9 +47,16 @@ public class ToDoService implements IToDoService {
     toDoRepository.deleteById(id);
   }
 
-//  public void update(long id, String text, boolean urgent, boolean done){
-//    toDoRepository.findById(id).setTitle(text);
-//    toDoService.findById(id).setUrgent(urgent);
-//    toDoService.findById(id).setDone(done);
-//  }
+  public Todo update(long id, String text, boolean urgent, boolean done){
+    Todo todo = toDoRepository.findById(id).get();
+    todo.setUrgent(urgent);
+    todo.setDone(done);
+    toDoRepository.save(todo);
+    return todo;
+  }
 }
+
+// MerchandiseEntity pantsInDB = repo.findById(pantsId).get();
+//pantsInDB.setPrice(44.99);
+//repo.save(pantsInDB);
+

@@ -64,14 +64,11 @@ public class TodoController implements CommandLineRunner {
   }
 
   @PostMapping("/editTask")
-  public String updateTask(Model model, @PathVariable("id") long id,
+  public String updateTask(Model model, @RequestParam long id,
                            @RequestParam(required = false) boolean urgent,
                            @RequestParam(required = false) boolean done,
                            @RequestParam(required = false) String text) {
-    model.addAttribute("todo",toDoService.findById(id));
-    toDoService.findById(id).setTitle(text);
-    toDoService.findById(id).setUrgent(urgent);
-    toDoService.findById(id).setDone(done);
+    toDoService.update(id,text,urgent,done);
     return "redirect:/todo";
   }
 
