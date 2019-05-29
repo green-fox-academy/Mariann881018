@@ -48,7 +48,7 @@ public class FoxController {
   public String getTrickCenter(@RequestParam(required = false) String name, Model model){
     if (name == null){
       return "login";
-    } else{
+    } else {
       model.addAttribute("fox",foxService.findByName(name));
       model.addAttribute("trick", trickService.getTrickList());
       return "trickCenter";
@@ -60,5 +60,4 @@ public class FoxController {
     foxService.findByName(name).addTrick(trick);
     return "redirect:/index?name=" + name;
   }
-
 }

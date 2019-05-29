@@ -19,7 +19,7 @@
     <p th:text="'This is ' + ${fox.getName()} + '. Currently living on ' + ${fox.food.getFoodName()} + ' and ' + ${fox.drink.getDrinkName()} + '. He knows ' + ${fox.numberOfTricks()} + ' tricks.'"></p>
     <h1>Known Tricks:</h1>
     <ul th:if="${fox.getTrickList().isEmpty()} == true">
-      <li>You know no tricks, yet. Go teach him some tricks!</li>
+      <li>This fox knows no tricks, yet. Go teach him some tricks!</li>
     </ul>
     <ul th:each="trick : ${fox.getTrickList()}">
       <li th:text="${trick}"></li>

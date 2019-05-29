@@ -15,6 +15,7 @@ public class DrinkService {
     listOfDrinks.add("Water");
     listOfDrinks.add("Beer");
     listOfDrinks.add("Lemonade");
+    listOfDrinks.add("Tea");
   }
 
   public List<String> getListOfDrinks() {

@@ -14,6 +14,7 @@ public class FoodService {
     listOfFoods.add("Pizza");
     listOfFoods.add("Gyros");
     listOfFoods.add("Salad");
+    listOfFoods.add("Chicken wrap");
   }
 
   public List<String> getListOfFoods() {

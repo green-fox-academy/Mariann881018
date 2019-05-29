@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Fox {
   private String name;
-  private ArrayList<String> listOfTricks = new ArrayList<>();
+  private List<String> listOfTricks = new ArrayList<>();
 
   @Autowired
   private Drink drink;
@@ -24,7 +24,6 @@ public class Fox {
     drink = new Drink("Coca Cola");
     food = new Food("Burger");
   }
-
 
   public int numberOfTricks(){
     if (listOfTricks != null){

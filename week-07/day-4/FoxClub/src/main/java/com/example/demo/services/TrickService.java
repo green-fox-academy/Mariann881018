@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public class TrickService {
-    ArrayList<String> trickList;
+    List<String> trickList;
 
     public TrickService(){
         trickList = new ArrayList<>();
@@ -16,10 +16,12 @@ public class TrickService {
         trickList.add("HTML");
         trickList.add("Javascript");
         trickList.add("Spring Master");
+        trickList.add("C++");
+        trickList.add("Android");
+        trickList.add("C#");
     }
 
     public List<String> getTrickList() {
         return trickList;
     }
-
 }

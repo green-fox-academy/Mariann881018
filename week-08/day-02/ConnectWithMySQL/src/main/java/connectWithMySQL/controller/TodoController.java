@@ -9,11 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
 @Controller
 public class TodoController implements CommandLineRunner {
 
@@ -23,27 +18,62 @@ public class TodoController implements CommandLineRunner {
   @Autowired
   private ToDoService toDoService;
 
-
 //  @GetMapping("/todo")
 //  @ResponseBody
 //  public String todo() {
 //    return "This is my first Todo"  ;
 //  }
+//
+//  @GetMapping("/todo")
+//  public String list(Model model) {
+//    model.addAttribute("todos", toDoService.findAll());
+//    return "todolist" ;
+//  }
 
   @GetMapping("/todo")
-  public String list(Model model) {
+  public String listActives(Model model, @RequestParam(required = false) boolean isActive) {
+    if (isActive){
+      model.addAttribute("todos",toDoService.findActiveElements());
+    } else
     model.addAttribute("todos", toDoService.findAll());
-    return "todolist" ;
-  }
-
-  @RequestMapping("/todo")
-  public String listActives(Model model, @RequestParam(value = "isActive", required = false) boolean isActive) {
-    model.addAttribute("todos", toDoService.findAll().stream()
-            .filter(todo -> !todo.isDone())
-            .collect(Collectors.toList()));
     return "todolist";
   }
 
+  @GetMapping("/createTask")
+  public String createNewTask(Model model) {
+    model.addAttribute("todo", new Todo());
+    return "create";
+  }
+
+  @PostMapping("/createTask")
+  public String addNewTask(Todo todo) {
+    toDoService.save(todo);
+    return "redirect:/todo";
+  }
+
+  @GetMapping("/deleteTask")
+  public String deleteTask(@RequestParam long id) {
+    toDoService.delete(id);
+    return "redirect:/todo";
+  }
+
+  @GetMapping("/editTask")
+  public String getEditorPage(Model model, @RequestParam long id) {
+    model.addAttribute("todo",toDoService.findById(id));
+    return "edit";
+  }
+
+  @PostMapping("/editTask")
+  public String updateTask(Model model, @PathVariable("id") long id,
+                           @RequestParam(required = false) boolean urgent,
+                           @RequestParam(required = false) boolean done,
+                           @RequestParam(required = false) String text) {
+    model.addAttribute("todo",toDoService.findById(id));
+    toDoService.findById(id).setTitle(text);
+    toDoService.findById(id).setUrgent(urgent);
+    toDoService.findById(id).setDone(done);
+    return "redirect:/todo";
+  }
 
   @Override
   public void run(String... args) throws Exception {
