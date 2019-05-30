@@ -18,7 +18,7 @@ public class TodoController implements CommandLineRunner {
   @Autowired
   private ToDoService toDoService;
 
-//  @GetMapping("/todo")
+//  @GetMapping("/todo")    // parts for the beginning of the exercise
 //  @ResponseBody
 //  public String todo() {
 //    return "This is my first Todo"  ;
@@ -51,24 +51,21 @@ public class TodoController implements CommandLineRunner {
     return "redirect:/todo";
   }
 
-  @GetMapping("/deleteTask")
+  @GetMapping("/deleteTask")  // should be /{id}/delete
   public String deleteTask(@RequestParam long id) {
     toDoService.delete(id);
     return "redirect:/todo";
   }
 
-  @GetMapping("/editTask")
+  @GetMapping("/editTask")      // should be /{id}/edit
   public String getEditorPage(Model model, @RequestParam long id) {
     model.addAttribute("todo",toDoService.findById(id));
     return "edit";
   }
 
-  @PostMapping("/editTask")
-  public String updateTask(Model model, @RequestParam long id,
-                           @RequestParam(required = false) boolean urgent,
-                           @RequestParam(required = false) boolean done,
-                           @RequestParam(required = false) String text) {
-    toDoService.update(id,text,urgent,done);
+  @PostMapping("/editTask")    // should be: /{id}/edit
+  public String updateTask(@RequestParam long id, boolean urgent, boolean done, String title) {
+    toDoService.update(id, urgent, done, title);
     return "redirect:/todo";
   }
 

@@ -6,7 +6,7 @@
 </head>
 <body>
 <form th:action="@{/createTask}" th:method="post" th:object="${todo}">
-    <label>Name</label><br>
+    <label>Task</label><br>
     <input type="text" th:field="*{title}"><br>
     <button type="submit">Add</button>
 </form>

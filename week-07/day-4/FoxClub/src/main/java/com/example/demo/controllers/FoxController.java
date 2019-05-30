@@ -30,8 +30,8 @@ public class FoxController {
       return "login";
     } else {
       model.addAttribute("fox", foxService.findByName(name));
-      model.addAttribute("food",foodService.getListOfFoods());
-      model.addAttribute("drink",drinkService.getListOfDrinks());
+      model.addAttribute("foods",foodService.getListOfFoods());
+      model.addAttribute("drinks",drinkService.getListOfDrinks());
       return "nutritionStore";
     }
   }

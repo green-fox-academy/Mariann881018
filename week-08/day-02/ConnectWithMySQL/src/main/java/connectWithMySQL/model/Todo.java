@@ -4,8 +4,9 @@ import javax.persistence.*;
 
 @Entity
 public class Todo {
+
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   @Column(nullable = true)
@@ -20,7 +21,7 @@ public class Todo {
     this.id = id;
   }
 
-  public Todo(long id,String title, boolean urgent, boolean done) {
+  public Todo(long id, String title, boolean urgent, boolean done) {
     this.id = id;
     this.title = title;
     this.urgent = urgent;

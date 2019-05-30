@@ -47,16 +47,12 @@ public class ToDoService implements IToDoService {
     toDoRepository.deleteById(id);
   }
 
-  public Todo update(long id, String text, boolean urgent, boolean done){
+  public Todo update(long id, boolean urgent, boolean done, String title){
     Todo todo = toDoRepository.findById(id).get();
     todo.setUrgent(urgent);
     todo.setDone(done);
+    todo.setTitle(title);
     toDoRepository.save(todo);
     return todo;
   }
 }
-
-// MerchandiseEntity pantsInDB = repo.findById(pantsId).get();
-//pantsInDB.setPrice(44.99);
-//repo.save(pantsInDB);
-
